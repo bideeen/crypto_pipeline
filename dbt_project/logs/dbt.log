@@ -2755,3 +2755,2804 @@ select * from with_metrics
 [0m22:24:13.720927 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000210172E5DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002101B1F4110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002101732C090>]}
 [0m22:24:13.721926 [debug] [MainThread]: Flushing usage events
 [0m22:24:14.863029 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:34:41.770387 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012BE71CDAD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012BE71CC390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012BE71CD2D0>]}
+
+
+============================== 22:34:41.776611 | efaeb2b1-582c-46f8-8b05-e0a2def415df ==============================
+[0m22:34:41.776611 [info ] [MainThread]: Running with dbt=1.11.7
+[0m22:34:41.777598 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Abideen Bello\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Abideen Bello\\dbt_projects\\crypto_pipeline\\dbt_project\\logs'}
+[0m22:34:42.092055 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'efaeb2b1-582c-46f8-8b05-e0a2def415df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012BE8265D50>]}
+[0m22:34:42.172948 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'efaeb2b1-582c-46f8-8b05-e0a2def415df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012BE3907390>]}
+[0m22:34:42.178677 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m22:34:42.531072 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m22:34:42.717524 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m22:34:42.719525 [debug] [MainThread]: Partial parsing: added file: crypto_pipeline://models\marts\mart_market_summary.sql
+[0m22:34:43.155407 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'efaeb2b1-582c-46f8-8b05-e0a2def415df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012B806F3E90>]}
+[0m22:34:43.262590 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\manifest.json
+[0m22:34:43.267639 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\semantic_manifest.json
+[0m22:34:43.294771 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'efaeb2b1-582c-46f8-8b05-e0a2def415df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012BE57C7F50>]}
+[0m22:34:43.295772 [info ] [MainThread]: Found 3 models, 7 data tests, 1 source, 474 macros
+[0m22:34:43.296779 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'efaeb2b1-582c-46f8-8b05-e0a2def415df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012B804FAB50>]}
+[0m22:34:43.300118 [info ] [MainThread]: 
+[0m22:34:43.301141 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:34:43.301141 [info ] [MainThread]: 
+[0m22:34:43.302136 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m22:34:43.310755 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_crypto'
+[0m22:34:43.396365 [debug] [ThreadPool]: Using duckdb connection "list_crypto"
+[0m22:34:43.396365 [debug] [ThreadPool]: On list_crypto: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "list_crypto"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"crypto"'
+    
+  
+  
+[0m22:34:43.397377 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:34:43.421776 [debug] [ThreadPool]: SQL status: OK in 0.024 seconds
+[0m22:34:43.423784 [debug] [ThreadPool]: On list_crypto: Close
+[0m22:34:43.424778 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_crypto, now create_crypto_main)
+[0m22:34:43.425775 [debug] [ThreadPool]: Creating schema "database: "crypto"
+schema: "main"
+"
+[0m22:34:43.434677 [debug] [ThreadPool]: Using duckdb connection "create_crypto_main"
+[0m22:34:43.434677 [debug] [ThreadPool]: On create_crypto_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "create_crypto_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='crypto'
+        and type='sqlite'
+    
+  
+[0m22:34:43.435822 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:34:43.436715 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m22:34:43.439212 [debug] [ThreadPool]: Using duckdb connection "create_crypto_main"
+[0m22:34:43.439212 [debug] [ThreadPool]: On create_crypto_main: BEGIN
+[0m22:34:43.440266 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m22:34:43.440266 [debug] [ThreadPool]: Using duckdb connection "create_crypto_main"
+[0m22:34:43.440266 [debug] [ThreadPool]: On create_crypto_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "create_crypto_main"} */
+
+    
+    
+        create schema if not exists "crypto"."main"
+    
+[0m22:34:43.441682 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m22:34:43.442982 [debug] [ThreadPool]: On create_crypto_main: COMMIT
+[0m22:34:43.442982 [debug] [ThreadPool]: Using duckdb connection "create_crypto_main"
+[0m22:34:43.444524 [debug] [ThreadPool]: On create_crypto_main: COMMIT
+[0m22:34:43.445030 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m22:34:43.446039 [debug] [ThreadPool]: On create_crypto_main: Close
+[0m22:34:43.449039 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_crypto_main'
+[0m22:34:43.458088 [debug] [ThreadPool]: Using duckdb connection "list_crypto_main"
+[0m22:34:43.459541 [debug] [ThreadPool]: On list_crypto_main: BEGIN
+[0m22:34:43.459541 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:34:43.461533 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m22:34:43.461533 [debug] [ThreadPool]: Using duckdb connection "list_crypto_main"
+[0m22:34:43.462540 [debug] [ThreadPool]: On list_crypto_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "list_crypto_main"} */
+select
+      'crypto' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'crypto'
+  
+[0m22:34:43.469069 [debug] [ThreadPool]: SQL status: OK in 0.006 seconds
+[0m22:34:43.471075 [debug] [ThreadPool]: On list_crypto_main: ROLLBACK
+[0m22:34:43.473205 [debug] [ThreadPool]: Failed to rollback 'list_crypto_main'
+[0m22:34:43.473205 [debug] [ThreadPool]: On list_crypto_main: Close
+[0m22:34:43.475269 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'efaeb2b1-582c-46f8-8b05-e0a2def415df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012BE3054990>]}
+[0m22:34:43.476269 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:34:43.477269 [debug] [MainThread]: On master: BEGIN
+[0m22:34:43.477269 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:34:43.478268 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m22:34:43.479269 [debug] [MainThread]: On master: COMMIT
+[0m22:34:43.480268 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:34:43.480268 [debug] [MainThread]: On master: COMMIT
+[0m22:34:43.481269 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m22:34:43.482271 [debug] [MainThread]: On master: Close
+[0m22:34:43.487737 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.stg_coin_prices
+[0m22:34:43.489109 [info ] [Thread-1 (]: 1 of 3 START sql view model main.stg_coin_prices ............................... [RUN]
+[0m22:34:43.490589 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.crypto_pipeline.stg_coin_prices'
+[0m22:34:43.491589 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.stg_coin_prices
+[0m22:34:43.503359 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.stg_coin_prices"
+[0m22:34:43.504389 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.stg_coin_prices
+[0m22:34:43.550422 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.stg_coin_prices"
+[0m22:34:43.552243 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.stg_coin_prices"
+[0m22:34:43.553709 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: BEGIN
+[0m22:34:43.554799 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m22:34:43.555798 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m22:34:43.556797 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.stg_coin_prices"
+[0m22:34:43.557797 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_coin_prices"} */
+
+  
+  create view "crypto"."main"."stg_coin_prices__dbt_tmp" as (
+    -- models/staging/stg_coin_prices.sql
+--
+-- Purpose: Clean and rename raw CoinGecko data.
+-- This is the ONLY place raw column names are referenced.
+-- Every model downstream uses these clean names.
+--
+-- If CoinGecko ever renames a field, we fix it here.
+-- Nothing else needs to change.
+
+with source as (
+    select * from "crypto"."raw"."coin_prices"
+),
+
+renamed as (
+    select
+        -- Identifiers
+        id                                          as coin_id,
+        symbol                                      as coin_symbol,
+        name                                        as coin_name,
+
+        -- Pricing
+        cast(current_price as double)               as price_usd,
+        cast(high_24h as double)                    as high_24h_usd,
+        cast(low_24h as double)                     as low_24h_usd,
+
+        -- Market data
+        cast(market_cap as double)                  as market_cap_usd,
+        cast(market_cap_rank as integer)            as market_cap_rank,
+        cast(total_volume as double)                as volume_24h_usd,
+
+        -- Price changes
+        cast(price_change_24h as double)            as price_change_24h_usd,
+        cast(price_change_percentage_24h as double) as price_change_pct_24h,
+
+        -- Supply
+        cast(circulating_supply as double)          as circulating_supply,
+        cast(total_supply as double)                as total_supply,
+
+        -- Timestamps
+        cast(last_updated as timestamp)             as last_updated_at,
+        cast(ingested_at as timestamp with time zone)
+                                                    as ingested_at
+
+    from source
+)
+
+select * from renamed
+  );
+
+[0m22:34:43.560294 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m22:34:43.570975 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.stg_coin_prices"
+[0m22:34:43.572176 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_coin_prices"} */
+alter view "crypto"."main"."stg_coin_prices" rename to "stg_coin_prices__dbt_backup"
+[0m22:34:43.573176 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m22:34:43.578175 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.stg_coin_prices"
+[0m22:34:43.579175 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_coin_prices"} */
+alter view "crypto"."main"."stg_coin_prices__dbt_tmp" rename to "stg_coin_prices"
+[0m22:34:43.580175 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m22:34:43.599194 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: COMMIT
+[0m22:34:43.600191 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.stg_coin_prices"
+[0m22:34:43.600191 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: COMMIT
+[0m22:34:43.605915 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m22:34:43.614915 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.stg_coin_prices"
+[0m22:34:43.615917 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_coin_prices"} */
+
+      drop view if exists "crypto"."main"."stg_coin_prices__dbt_backup" cascade
+    
+[0m22:34:43.618914 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m22:34:43.624275 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: Close
+[0m22:34:43.627276 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'efaeb2b1-582c-46f8-8b05-e0a2def415df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012B80BD9710>]}
+[0m22:34:43.628276 [info ] [Thread-1 (]: 1 of 3 OK created sql view model main.stg_coin_prices .......................... [[32mOK[0m in 0.14s]
+[0m22:34:43.629278 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.stg_coin_prices
+[0m22:34:43.630423 [debug] [Thread-3 (]: Began running node model.crypto_pipeline.int_daily_returns
+[0m22:34:43.631848 [info ] [Thread-3 (]: 2 of 3 START sql view model main.int_daily_returns ............................. [RUN]
+[0m22:34:43.632853 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.crypto_pipeline.int_daily_returns'
+[0m22:34:43.634179 [debug] [Thread-3 (]: Began compiling node model.crypto_pipeline.int_daily_returns
+[0m22:34:43.637503 [debug] [Thread-3 (]: Writing injected SQL for node "model.crypto_pipeline.int_daily_returns"
+[0m22:34:43.639591 [debug] [Thread-3 (]: Began executing node model.crypto_pipeline.int_daily_returns
+[0m22:34:43.646028 [debug] [Thread-3 (]: Writing runtime sql for node "model.crypto_pipeline.int_daily_returns"
+[0m22:34:43.647029 [debug] [Thread-3 (]: Using duckdb connection "model.crypto_pipeline.int_daily_returns"
+[0m22:34:43.648432 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: BEGIN
+[0m22:34:43.648432 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m22:34:43.650432 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m22:34:43.651550 [debug] [Thread-3 (]: Using duckdb connection "model.crypto_pipeline.int_daily_returns"
+[0m22:34:43.651550 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.int_daily_returns"} */
+
+  
+  create view "crypto"."main"."int_daily_returns__dbt_tmp" as (
+    -- models/intermediate/int_daily_returns.sql
+--
+-- Purpose: Calculate derived metrics per coin.
+-- Adds market sentiment classification and volume anomaly detection.
+--
+-- Why intermediate and not directly in marts?
+-- These calculations might be reused by multiple mart models.
+-- We calculate once here, reference many times downstream.
+
+with prices as (
+    select * from "crypto"."main"."stg_coin_prices"
+),
+
+with_metrics as (
+    select
+        coin_id,
+        coin_symbol,
+        coin_name,
+        price_usd,
+        high_24h_usd,
+        low_24h_usd,
+        market_cap_usd,
+        market_cap_rank,
+        volume_24h_usd,
+        price_change_pct_24h,
+        circulating_supply,
+        last_updated_at,
+        ingested_at,
+
+        -- How wide was today's price range as % of price?
+        -- High range = volatile day
+        round(
+            ((high_24h_usd - low_24h_usd) / price_usd) * 100,
+            2
+        ) as price_range_pct,
+
+        -- Volume to market cap ratio
+        -- High ratio = a lot of the coin is being traded today
+        round(
+            (volume_24h_usd / nullif(market_cap_usd, 0)) * 100,
+            2
+        ) as volume_to_mcap_pct,
+
+        -- Market sentiment based on 24h price change
+        case
+            when price_change_pct_24h >=  10 then 'strong_bullish'
+            when price_change_pct_24h >=   3 then 'bullish'
+            when price_change_pct_24h >=  -3 then 'neutral'
+            when price_change_pct_24h >= -10 then 'bearish'
+            else 'strong_bearish'
+        end as market_sentiment,
+
+        -- Is this coin showing unusual volume today?
+        case
+            when (volume_24h_usd / nullif(market_cap_usd, 0)) > 0.3
+                then 'very_high'
+            when (volume_24h_usd / nullif(market_cap_usd, 0)) > 0.1
+                then 'high'
+            when (volume_24h_usd / nullif(market_cap_usd, 0)) > 0.05
+                then 'normal'
+            else 'low'
+        end as volume_activity
+
+    from prices
+)
+
+select * from with_metrics
+  );
+
+[0m22:34:43.656547 [debug] [Thread-3 (]: SQL status: OK in 0.003 seconds
+[0m22:34:43.660547 [debug] [Thread-3 (]: Using duckdb connection "model.crypto_pipeline.int_daily_returns"
+[0m22:34:43.661550 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.int_daily_returns"} */
+alter view "crypto"."main"."int_daily_returns" rename to "int_daily_returns__dbt_backup"
+[0m22:34:43.663548 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m22:34:43.670007 [debug] [Thread-3 (]: Using duckdb connection "model.crypto_pipeline.int_daily_returns"
+[0m22:34:43.671005 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.int_daily_returns"} */
+alter view "crypto"."main"."int_daily_returns__dbt_tmp" rename to "int_daily_returns"
+[0m22:34:43.672275 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m22:34:43.675860 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: COMMIT
+[0m22:34:43.675860 [debug] [Thread-3 (]: Using duckdb connection "model.crypto_pipeline.int_daily_returns"
+[0m22:34:43.676860 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: COMMIT
+[0m22:34:43.679326 [debug] [Thread-3 (]: SQL status: OK in 0.002 seconds
+[0m22:34:43.682872 [debug] [Thread-3 (]: Using duckdb connection "model.crypto_pipeline.int_daily_returns"
+[0m22:34:43.684078 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.int_daily_returns"} */
+
+      drop view if exists "crypto"."main"."int_daily_returns__dbt_backup" cascade
+    
+[0m22:34:43.685091 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m22:34:43.687508 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: Close
+[0m22:34:43.688509 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'efaeb2b1-582c-46f8-8b05-e0a2def415df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012B81C54E90>]}
+[0m22:34:43.689940 [info ] [Thread-3 (]: 2 of 3 OK created sql view model main.int_daily_returns ........................ [[32mOK[0m in 0.06s]
+[0m22:34:43.692139 [debug] [Thread-3 (]: Finished running node model.crypto_pipeline.int_daily_returns
+[0m22:34:43.693205 [debug] [Thread-2 (]: Began running node model.crypto_pipeline.mart_market_summary
+[0m22:34:43.694205 [info ] [Thread-2 (]: 3 of 3 START sql table model main.mart_market_summary .......................... [RUN]
+[0m22:34:43.695206 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.crypto_pipeline.mart_market_summary'
+[0m22:34:43.695206 [debug] [Thread-2 (]: Began compiling node model.crypto_pipeline.mart_market_summary
+[0m22:34:43.701207 [debug] [Thread-2 (]: Writing injected SQL for node "model.crypto_pipeline.mart_market_summary"
+[0m22:34:43.703208 [debug] [Thread-2 (]: Began executing node model.crypto_pipeline.mart_market_summary
+[0m22:34:43.727984 [debug] [Thread-2 (]: Writing runtime sql for node "model.crypto_pipeline.mart_market_summary"
+[0m22:34:43.730012 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:34:43.731012 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: BEGIN
+[0m22:34:43.732033 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m22:34:43.733036 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m22:34:43.734033 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:34:43.735033 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_market_summary"} */
+
+  
+    
+    
+
+    create  table
+      "crypto"."main"."mart_market_summary__dbt_tmp"
+  
+    as (
+      -- models/marts/mart_market_summary.sql
+--
+-- Purpose: Final market summary table for dashboards and reporting.
+-- One row per coin per ingestion run.
+--
+-- This is the table stakeholders query.
+-- Column names must be self-explanatory to a non-engineer.
+-- No raw field names. No ambiguous abbreviations.
+
+with daily_returns as (
+    select * from "crypto"."main"."int_daily_returns"
+),
+
+final as (
+    select
+        -- Identity
+        coin_id,
+        coin_symbol,
+        coin_name,
+
+        -- Pricing
+        price_usd,
+        high_24h_usd,
+        low_24h_usd,
+        price_change_pct_24h,
+        price_range_pct,
+
+        -- Market standing
+        market_cap_usd,
+        market_cap_rank,
+
+        -- Volume
+        volume_24h_usd,
+        volume_to_mcap_pct,
+        volume_activity,
+
+        -- Signals
+        market_sentiment,
+
+        -- Metadata
+        last_updated_at,
+        ingested_at,
+
+        -- Pipeline audit field
+        -- Lets you know exactly when dbt wrote this row
+        current_timestamp as dbt_updated_at
+
+    from daily_returns
+)
+
+select * from final
+    );
+  
+  
+[0m22:34:43.749033 [debug] [Thread-2 (]: SQL status: OK in 0.013 seconds
+[0m22:34:43.753427 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:34:43.754429 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_market_summary"} */
+alter table "crypto"."main"."mart_market_summary__dbt_tmp" rename to "mart_market_summary"
+[0m22:34:43.755429 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m22:34:43.762430 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: COMMIT
+[0m22:34:43.763431 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:34:43.763431 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: COMMIT
+[0m22:34:43.767422 [debug] [Thread-2 (]: SQL status: OK in 0.003 seconds
+[0m22:34:43.770806 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:34:43.771882 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_market_summary"} */
+
+      drop table if exists "crypto"."main"."mart_market_summary__dbt_backup" cascade
+    
+[0m22:34:43.772886 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m22:34:43.775079 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: Close
+[0m22:34:43.776074 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'efaeb2b1-582c-46f8-8b05-e0a2def415df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012B80B158D0>]}
+[0m22:34:43.777073 [info ] [Thread-2 (]: 3 of 3 OK created sql table model main.mart_market_summary ..................... [[32mOK[0m in 0.08s]
+[0m22:34:43.778072 [debug] [Thread-2 (]: Finished running node model.crypto_pipeline.mart_market_summary
+[0m22:34:43.780478 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:34:43.781509 [debug] [MainThread]: On master: BEGIN
+[0m22:34:43.782510 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m22:34:43.783512 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m22:34:43.783512 [debug] [MainThread]: On master: COMMIT
+[0m22:34:43.784516 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:34:43.784516 [debug] [MainThread]: On master: COMMIT
+[0m22:34:43.785670 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m22:34:43.785670 [debug] [MainThread]: On master: Close
+[0m22:34:43.787109 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:34:43.787109 [debug] [MainThread]: Connection 'create_crypto_main' was properly closed.
+[0m22:34:43.788150 [debug] [MainThread]: Connection 'list_crypto_main' was properly closed.
+[0m22:34:43.788150 [debug] [MainThread]: Connection 'model.crypto_pipeline.stg_coin_prices' was properly closed.
+[0m22:34:43.789149 [debug] [MainThread]: Connection 'model.crypto_pipeline.int_daily_returns' was properly closed.
+[0m22:34:43.790149 [debug] [MainThread]: Connection 'model.crypto_pipeline.mart_market_summary' was properly closed.
+[0m22:34:43.791143 [info ] [MainThread]: 
+[0m22:34:43.792142 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 0.49 seconds (0.49s).
+[0m22:34:43.793143 [debug] [MainThread]: Command end result
+[0m22:34:43.834343 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\manifest.json
+[0m22:34:43.840728 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\semantic_manifest.json
+[0m22:34:43.854635 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\run_results.json
+[0m22:34:43.854635 [info ] [MainThread]: 
+[0m22:34:43.856029 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:34:43.858380 [info ] [MainThread]: 
+[0m22:34:43.858380 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m22:34:43.861750 [debug] [MainThread]: Command `dbt run` succeeded at 22:34:43.860749 after 2.28 seconds
+[0m22:34:43.861750 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012BE1DB5D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012BE6E72590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012BE1DF6F90>]}
+[0m22:34:43.863153 [debug] [MainThread]: Flushing usage events
+[0m22:34:45.421406 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:37:22.454959 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D6FE922D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D6FE923D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D6FE90710>]}
+
+
+============================== 22:37:22.458960 | 068e8afe-6047-4aa3-9f1a-bcf5269ef781 ==============================
+[0m22:37:22.458960 [info ] [MainThread]: Running with dbt=1.11.7
+[0m22:37:22.459960 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Abideen Bello\\.dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt run', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Abideen Bello\\dbt_projects\\crypto_pipeline\\dbt_project\\logs'}
+[0m22:37:22.718387 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '068e8afe-6047-4aa3-9f1a-bcf5269ef781', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D70F0C390>]}
+[0m22:37:22.786523 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '068e8afe-6047-4aa3-9f1a-bcf5269ef781', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D6C5C6AD0>]}
+[0m22:37:22.789434 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m22:37:23.074795 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m22:37:23.233953 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m22:37:23.234954 [debug] [MainThread]: Partial parsing: updated file: crypto_pipeline://models\marts\mart_market_summary.sql
+[0m22:37:23.677129 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '068e8afe-6047-4aa3-9f1a-bcf5269ef781', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D00687E50>]}
+[0m22:37:23.990736 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\manifest.json
+[0m22:37:23.994203 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\semantic_manifest.json
+[0m22:37:24.026287 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '068e8afe-6047-4aa3-9f1a-bcf5269ef781', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D6FD32410>]}
+[0m22:37:24.027393 [info ] [MainThread]: Found 3 models, 7 data tests, 1 source, 474 macros
+[0m22:37:24.028406 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '068e8afe-6047-4aa3-9f1a-bcf5269ef781', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D004F8450>]}
+[0m22:37:24.031889 [info ] [MainThread]: 
+[0m22:37:24.033344 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:37:24.034527 [info ] [MainThread]: 
+[0m22:37:24.035534 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m22:37:24.041825 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_crypto'
+[0m22:37:24.140571 [debug] [ThreadPool]: Using duckdb connection "list_crypto"
+[0m22:37:24.141572 [debug] [ThreadPool]: On list_crypto: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "list_crypto"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"crypto"'
+    
+  
+  
+[0m22:37:24.141572 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:37:24.168463 [debug] [ThreadPool]: SQL status: OK in 0.026 seconds
+[0m22:37:24.170460 [debug] [ThreadPool]: On list_crypto: Close
+[0m22:37:24.172459 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_crypto, now create_crypto_main)
+[0m22:37:24.172459 [debug] [ThreadPool]: Creating schema "database: "crypto"
+schema: "main"
+"
+[0m22:37:24.181458 [debug] [ThreadPool]: Using duckdb connection "create_crypto_main"
+[0m22:37:24.182460 [debug] [ThreadPool]: On create_crypto_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "create_crypto_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='crypto'
+        and type='sqlite'
+    
+  
+[0m22:37:24.183460 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:37:24.185460 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m22:37:24.187460 [debug] [ThreadPool]: Using duckdb connection "create_crypto_main"
+[0m22:37:24.188461 [debug] [ThreadPool]: On create_crypto_main: BEGIN
+[0m22:37:24.189461 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m22:37:24.189461 [debug] [ThreadPool]: Using duckdb connection "create_crypto_main"
+[0m22:37:24.190461 [debug] [ThreadPool]: On create_crypto_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "create_crypto_main"} */
+
+    
+    
+        create schema if not exists "crypto"."main"
+    
+[0m22:37:24.191461 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m22:37:24.192460 [debug] [ThreadPool]: On create_crypto_main: COMMIT
+[0m22:37:24.193461 [debug] [ThreadPool]: Using duckdb connection "create_crypto_main"
+[0m22:37:24.194461 [debug] [ThreadPool]: On create_crypto_main: COMMIT
+[0m22:37:24.194461 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m22:37:24.195461 [debug] [ThreadPool]: On create_crypto_main: Close
+[0m22:37:24.197460 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_crypto_main'
+[0m22:37:24.204773 [debug] [ThreadPool]: Using duckdb connection "list_crypto_main"
+[0m22:37:24.205789 [debug] [ThreadPool]: On list_crypto_main: BEGIN
+[0m22:37:24.205789 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:37:24.206764 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m22:37:24.207791 [debug] [ThreadPool]: Using duckdb connection "list_crypto_main"
+[0m22:37:24.208786 [debug] [ThreadPool]: On list_crypto_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "list_crypto_main"} */
+select
+      'crypto' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'crypto'
+  
+[0m22:37:24.212766 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m22:37:24.215051 [debug] [ThreadPool]: On list_crypto_main: ROLLBACK
+[0m22:37:24.217050 [debug] [ThreadPool]: Failed to rollback 'list_crypto_main'
+[0m22:37:24.218049 [debug] [ThreadPool]: On list_crypto_main: Close
+[0m22:37:24.219049 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '068e8afe-6047-4aa3-9f1a-bcf5269ef781', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D6F5E5850>]}
+[0m22:37:24.220048 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:37:24.221048 [debug] [MainThread]: On master: BEGIN
+[0m22:37:24.221048 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:37:24.223048 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m22:37:24.223048 [debug] [MainThread]: On master: COMMIT
+[0m22:37:24.224052 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:37:24.224052 [debug] [MainThread]: On master: COMMIT
+[0m22:37:24.225140 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m22:37:24.226155 [debug] [MainThread]: On master: Close
+[0m22:37:24.231181 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.stg_coin_prices
+[0m22:37:24.232165 [info ] [Thread-1 (]: 1 of 3 START sql view model main.stg_coin_prices ............................... [RUN]
+[0m22:37:24.234164 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.crypto_pipeline.stg_coin_prices'
+[0m22:37:24.234164 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.stg_coin_prices
+[0m22:37:24.243229 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.stg_coin_prices"
+[0m22:37:24.245413 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.stg_coin_prices
+[0m22:37:24.285981 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.stg_coin_prices"
+[0m22:37:24.287998 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.stg_coin_prices"
+[0m22:37:24.288998 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: BEGIN
+[0m22:37:24.290002 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m22:37:24.290998 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m22:37:24.291998 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.stg_coin_prices"
+[0m22:37:24.292997 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_coin_prices"} */
+
+  
+  create view "crypto"."main"."stg_coin_prices__dbt_tmp" as (
+    -- models/staging/stg_coin_prices.sql
+--
+-- Purpose: Clean and rename raw CoinGecko data.
+-- This is the ONLY place raw column names are referenced.
+-- Every model downstream uses these clean names.
+--
+-- If CoinGecko ever renames a field, we fix it here.
+-- Nothing else needs to change.
+
+with source as (
+    select * from "crypto"."raw"."coin_prices"
+),
+
+renamed as (
+    select
+        -- Identifiers
+        id                                          as coin_id,
+        symbol                                      as coin_symbol,
+        name                                        as coin_name,
+
+        -- Pricing
+        cast(current_price as double)               as price_usd,
+        cast(high_24h as double)                    as high_24h_usd,
+        cast(low_24h as double)                     as low_24h_usd,
+
+        -- Market data
+        cast(market_cap as double)                  as market_cap_usd,
+        cast(market_cap_rank as integer)            as market_cap_rank,
+        cast(total_volume as double)                as volume_24h_usd,
+
+        -- Price changes
+        cast(price_change_24h as double)            as price_change_24h_usd,
+        cast(price_change_percentage_24h as double) as price_change_pct_24h,
+
+        -- Supply
+        cast(circulating_supply as double)          as circulating_supply,
+        cast(total_supply as double)                as total_supply,
+
+        -- Timestamps
+        cast(last_updated as timestamp)             as last_updated_at,
+        cast(ingested_at as timestamp with time zone)
+                                                    as ingested_at
+
+    from source
+)
+
+select * from renamed
+  );
+
+[0m22:37:24.294997 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m22:37:24.305239 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.stg_coin_prices"
+[0m22:37:24.306651 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_coin_prices"} */
+alter view "crypto"."main"."stg_coin_prices" rename to "stg_coin_prices__dbt_backup"
+[0m22:37:24.308708 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m22:37:24.313705 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.stg_coin_prices"
+[0m22:37:24.313705 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_coin_prices"} */
+alter view "crypto"."main"."stg_coin_prices__dbt_tmp" rename to "stg_coin_prices"
+[0m22:37:24.315708 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m22:37:24.333248 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: COMMIT
+[0m22:37:24.334307 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.stg_coin_prices"
+[0m22:37:24.335340 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: COMMIT
+[0m22:37:24.339626 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m22:37:24.348601 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.stg_coin_prices"
+[0m22:37:24.349599 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_coin_prices"} */
+
+      drop view if exists "crypto"."main"."stg_coin_prices__dbt_backup" cascade
+    
+[0m22:37:24.352162 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m22:37:24.355201 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: Close
+[0m22:37:24.357186 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '068e8afe-6047-4aa3-9f1a-bcf5269ef781', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D00B3F110>]}
+[0m22:37:24.358202 [info ] [Thread-1 (]: 1 of 3 OK created sql view model main.stg_coin_prices .......................... [[32mOK[0m in 0.12s]
+[0m22:37:24.359185 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.stg_coin_prices
+[0m22:37:24.360341 [debug] [Thread-3 (]: Began running node model.crypto_pipeline.int_daily_returns
+[0m22:37:24.361341 [info ] [Thread-3 (]: 2 of 3 START sql view model main.int_daily_returns ............................. [RUN]
+[0m22:37:24.361341 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.crypto_pipeline.int_daily_returns'
+[0m22:37:24.362361 [debug] [Thread-3 (]: Began compiling node model.crypto_pipeline.int_daily_returns
+[0m22:37:24.367361 [debug] [Thread-3 (]: Writing injected SQL for node "model.crypto_pipeline.int_daily_returns"
+[0m22:37:24.368339 [debug] [Thread-3 (]: Began executing node model.crypto_pipeline.int_daily_returns
+[0m22:37:24.377839 [debug] [Thread-3 (]: Writing runtime sql for node "model.crypto_pipeline.int_daily_returns"
+[0m22:37:24.379822 [debug] [Thread-3 (]: Using duckdb connection "model.crypto_pipeline.int_daily_returns"
+[0m22:37:24.379822 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: BEGIN
+[0m22:37:24.381822 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m22:37:24.383822 [debug] [Thread-3 (]: SQL status: OK in 0.003 seconds
+[0m22:37:24.385189 [debug] [Thread-3 (]: Using duckdb connection "model.crypto_pipeline.int_daily_returns"
+[0m22:37:24.386190 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.int_daily_returns"} */
+
+  
+  create view "crypto"."main"."int_daily_returns__dbt_tmp" as (
+    -- models/intermediate/int_daily_returns.sql
+--
+-- Purpose: Calculate derived metrics per coin.
+-- Adds market sentiment classification and volume anomaly detection.
+--
+-- Why intermediate and not directly in marts?
+-- These calculations might be reused by multiple mart models.
+-- We calculate once here, reference many times downstream.
+
+with prices as (
+    select * from "crypto"."main"."stg_coin_prices"
+),
+
+with_metrics as (
+    select
+        coin_id,
+        coin_symbol,
+        coin_name,
+        price_usd,
+        high_24h_usd,
+        low_24h_usd,
+        market_cap_usd,
+        market_cap_rank,
+        volume_24h_usd,
+        price_change_pct_24h,
+        circulating_supply,
+        last_updated_at,
+        ingested_at,
+
+        -- How wide was today's price range as % of price?
+        -- High range = volatile day
+        round(
+            ((high_24h_usd - low_24h_usd) / price_usd) * 100,
+            2
+        ) as price_range_pct,
+
+        -- Volume to market cap ratio
+        -- High ratio = a lot of the coin is being traded today
+        round(
+            (volume_24h_usd / nullif(market_cap_usd, 0)) * 100,
+            2
+        ) as volume_to_mcap_pct,
+
+        -- Market sentiment based on 24h price change
+        case
+            when price_change_pct_24h >=  10 then 'strong_bullish'
+            when price_change_pct_24h >=   3 then 'bullish'
+            when price_change_pct_24h >=  -3 then 'neutral'
+            when price_change_pct_24h >= -10 then 'bearish'
+            else 'strong_bearish'
+        end as market_sentiment,
+
+        -- Is this coin showing unusual volume today?
+        case
+            when (volume_24h_usd / nullif(market_cap_usd, 0)) > 0.3
+                then 'very_high'
+            when (volume_24h_usd / nullif(market_cap_usd, 0)) > 0.1
+                then 'high'
+            when (volume_24h_usd / nullif(market_cap_usd, 0)) > 0.05
+                then 'normal'
+            else 'low'
+        end as volume_activity
+
+    from prices
+)
+
+select * from with_metrics
+  );
+
+[0m22:37:24.390234 [debug] [Thread-3 (]: SQL status: OK in 0.004 seconds
+[0m22:37:24.395549 [debug] [Thread-3 (]: Using duckdb connection "model.crypto_pipeline.int_daily_returns"
+[0m22:37:24.396562 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.int_daily_returns"} */
+alter view "crypto"."main"."int_daily_returns" rename to "int_daily_returns__dbt_backup"
+[0m22:37:24.398561 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m22:37:24.404849 [debug] [Thread-3 (]: Using duckdb connection "model.crypto_pipeline.int_daily_returns"
+[0m22:37:24.405852 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.int_daily_returns"} */
+alter view "crypto"."main"."int_daily_returns__dbt_tmp" rename to "int_daily_returns"
+[0m22:37:24.406852 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m22:37:24.408849 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: COMMIT
+[0m22:37:24.409849 [debug] [Thread-3 (]: Using duckdb connection "model.crypto_pipeline.int_daily_returns"
+[0m22:37:24.410849 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: COMMIT
+[0m22:37:24.412851 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m22:37:24.417192 [debug] [Thread-3 (]: Using duckdb connection "model.crypto_pipeline.int_daily_returns"
+[0m22:37:24.418191 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.int_daily_returns"} */
+
+      drop view if exists "crypto"."main"."int_daily_returns__dbt_backup" cascade
+    
+[0m22:37:24.420208 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m22:37:24.422228 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: Close
+[0m22:37:24.423222 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '068e8afe-6047-4aa3-9f1a-bcf5269ef781', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D01C4FD10>]}
+[0m22:37:24.425224 [info ] [Thread-3 (]: 2 of 3 OK created sql view model main.int_daily_returns ........................ [[32mOK[0m in 0.06s]
+[0m22:37:24.426220 [debug] [Thread-3 (]: Finished running node model.crypto_pipeline.int_daily_returns
+[0m22:37:24.427204 [debug] [Thread-2 (]: Began running node model.crypto_pipeline.mart_market_summary
+[0m22:37:24.428207 [info ] [Thread-2 (]: 3 of 3 START sql table model main.mart_market_summary .......................... [RUN]
+[0m22:37:24.429222 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.crypto_pipeline.mart_market_summary'
+[0m22:37:24.430204 [debug] [Thread-2 (]: Began compiling node model.crypto_pipeline.mart_market_summary
+[0m22:37:24.435640 [debug] [Thread-2 (]: Writing injected SQL for node "model.crypto_pipeline.mart_market_summary"
+[0m22:37:24.436618 [debug] [Thread-2 (]: Began executing node model.crypto_pipeline.mart_market_summary
+[0m22:37:24.469424 [debug] [Thread-2 (]: Writing runtime sql for node "model.crypto_pipeline.mart_market_summary"
+[0m22:37:24.472416 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:37:24.473414 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: BEGIN
+[0m22:37:24.474414 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m22:37:24.475413 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m22:37:24.476424 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:37:24.477420 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_market_summary"} */
+
+  
+    
+    
+
+    create  table
+      "crypto"."main"."mart_market_summary__dbt_tmp"
+  
+    as (
+      -- models/marts/mart_market_summary.sql
+--
+-- Purpose: Final market summary table for dashboards and reporting.
+-- One row per coin per ingestion run.
+--
+-- This is the table stakeholders query.
+-- Column names must be self-explanatory to a non-engineer.
+-- No raw field names. No ambiguous abbreviations.
+
+with daily_returns as (
+    select * from "crypto"."main"."int_daily_returns"
+),
+
+final as (
+    select
+        -- Identity
+        coin_id,
+        coin_symbol,
+        coin_name,
+
+        -- Pricing
+        price_usd,
+        high_24h_usd,
+        low_24h_usd,
+        price_change_pct_24h,
+        price_range_pct,
+
+        -- Market standing
+        market_cap_usd,
+        market_cap_rank,
+
+        -- Volume
+        volume_24h_usd,
+        volume_to_mcap_pct,
+        volume_activity,
+
+        -- Signals
+        market_sentiment,
+
+        -- Metadata
+        last_updated_at,
+        ingested_at,
+
+        -- Pipeline audit field
+        -- Lets you know exactly when dbt wrote this row
+        -- current_timestamp as dbt_updated_at
+        timezone('UTC', current_timestamp) as dbt_updated_at
+
+    from daily_returns
+)
+
+select * from final
+    );
+  
+  
+[0m22:37:24.487778 [debug] [Thread-2 (]: SQL status: OK in 0.010 seconds
+[0m22:37:24.497055 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:37:24.497055 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_market_summary"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'mart_market_summary'
+  
+[0m22:37:24.500050 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m22:37:24.502394 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:37:24.503418 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_market_summary"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'mart_market_summary'
+  
+[0m22:37:24.505394 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m22:37:24.510837 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:37:24.511836 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_market_summary"} */
+alter table "crypto"."main"."mart_market_summary" rename to "mart_market_summary__dbt_backup"
+[0m22:37:24.512840 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m22:37:24.519455 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:37:24.520453 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_market_summary"} */
+alter table "crypto"."main"."mart_market_summary__dbt_tmp" rename to "mart_market_summary"
+[0m22:37:24.521456 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m22:37:24.529836 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: COMMIT
+[0m22:37:24.529836 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:37:24.531839 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: COMMIT
+[0m22:37:24.534955 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m22:37:24.539481 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:37:24.539481 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_market_summary"} */
+
+      drop table if exists "crypto"."main"."mart_market_summary__dbt_backup" cascade
+    
+[0m22:37:24.542158 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m22:37:24.544174 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: Close
+[0m22:37:24.546181 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '068e8afe-6047-4aa3-9f1a-bcf5269ef781', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D00BC8E50>]}
+[0m22:37:24.547174 [info ] [Thread-2 (]: 3 of 3 OK created sql table model main.mart_market_summary ..................... [[32mOK[0m in 0.12s]
+[0m22:37:24.551174 [debug] [Thread-2 (]: Finished running node model.crypto_pipeline.mart_market_summary
+[0m22:37:24.553540 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:37:24.554046 [debug] [MainThread]: On master: BEGIN
+[0m22:37:24.555051 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m22:37:24.556050 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m22:37:24.556050 [debug] [MainThread]: On master: COMMIT
+[0m22:37:24.557497 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:37:24.557497 [debug] [MainThread]: On master: COMMIT
+[0m22:37:24.558956 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m22:37:24.560306 [debug] [MainThread]: On master: Close
+[0m22:37:24.561326 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:37:24.561326 [debug] [MainThread]: Connection 'create_crypto_main' was properly closed.
+[0m22:37:24.562434 [debug] [MainThread]: Connection 'list_crypto_main' was properly closed.
+[0m22:37:24.562434 [debug] [MainThread]: Connection 'model.crypto_pipeline.stg_coin_prices' was properly closed.
+[0m22:37:24.563868 [debug] [MainThread]: Connection 'model.crypto_pipeline.int_daily_returns' was properly closed.
+[0m22:37:24.564868 [debug] [MainThread]: Connection 'model.crypto_pipeline.mart_market_summary' was properly closed.
+[0m22:37:24.565869 [info ] [MainThread]: 
+[0m22:37:24.566870 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 0.53 seconds (0.53s).
+[0m22:37:24.569240 [debug] [MainThread]: Command end result
+[0m22:37:24.613724 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\manifest.json
+[0m22:37:24.619744 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\semantic_manifest.json
+[0m22:37:24.628896 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\run_results.json
+[0m22:37:24.630266 [info ] [MainThread]: 
+[0m22:37:24.631242 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:37:24.632429 [info ] [MainThread]: 
+[0m22:37:24.634430 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m22:37:24.635453 [debug] [MainThread]: Command `dbt run` succeeded at 22:37:24.635453 after 2.32 seconds
+[0m22:37:24.636468 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D6AAD5D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D6AB17C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D6AB1C1D0>]}
+[0m22:37:24.637467 [debug] [MainThread]: Flushing usage events
+[0m22:37:26.016701 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:37:32.788418 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000224C2FA1ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000224C3FA0BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000224C2FA1C90>]}
+
+
+============================== 22:37:32.792421 | d7125835-2951-40ee-840f-f22f86859b0f ==============================
+[0m22:37:32.792421 [info ] [MainThread]: Running with dbt=1.11.7
+[0m22:37:32.793425 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Abideen Bello\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt run --select mart_market_summary', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Abideen Bello\\dbt_projects\\crypto_pipeline\\dbt_project\\logs'}
+[0m22:37:33.069212 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd7125835-2951-40ee-840f-f22f86859b0f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000224C401C2D0>]}
+[0m22:37:33.139572 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd7125835-2951-40ee-840f-f22f86859b0f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000224BF6E5790>]}
+[0m22:37:33.143935 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m22:37:33.409075 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m22:37:33.557458 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:37:33.558458 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m22:37:33.559458 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:37:33.608458 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd7125835-2951-40ee-840f-f22f86859b0f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022480508810>]}
+[0m22:37:33.705879 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\manifest.json
+[0m22:37:33.707879 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\semantic_manifest.json
+[0m22:37:33.728879 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd7125835-2951-40ee-840f-f22f86859b0f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002248073BF10>]}
+[0m22:37:33.729879 [info ] [MainThread]: Found 3 models, 7 data tests, 1 source, 474 macros
+[0m22:37:33.730879 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd7125835-2951-40ee-840f-f22f86859b0f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022480075D10>]}
+[0m22:37:33.732880 [info ] [MainThread]: 
+[0m22:37:33.733879 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:37:33.733879 [info ] [MainThread]: 
+[0m22:37:33.734879 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m22:37:33.736880 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_crypto'
+[0m22:37:33.862968 [debug] [ThreadPool]: Using duckdb connection "list_crypto"
+[0m22:37:33.862968 [debug] [ThreadPool]: On list_crypto: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "list_crypto"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"crypto"'
+    
+  
+  
+[0m22:37:33.863969 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:37:33.883918 [debug] [ThreadPool]: SQL status: OK in 0.020 seconds
+[0m22:37:33.885901 [debug] [ThreadPool]: On list_crypto: Close
+[0m22:37:33.886901 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_crypto, now create_crypto_main)
+[0m22:37:33.888183 [debug] [ThreadPool]: Creating schema "database: "crypto"
+schema: "main"
+"
+[0m22:37:33.894557 [debug] [ThreadPool]: Using duckdb connection "create_crypto_main"
+[0m22:37:33.895558 [debug] [ThreadPool]: On create_crypto_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "create_crypto_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='crypto'
+        and type='sqlite'
+    
+  
+[0m22:37:33.895558 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:37:33.896926 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m22:37:33.897931 [debug] [ThreadPool]: Using duckdb connection "create_crypto_main"
+[0m22:37:33.899263 [debug] [ThreadPool]: On create_crypto_main: BEGIN
+[0m22:37:33.899263 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m22:37:33.900740 [debug] [ThreadPool]: Using duckdb connection "create_crypto_main"
+[0m22:37:33.900740 [debug] [ThreadPool]: On create_crypto_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "create_crypto_main"} */
+
+    
+    
+        create schema if not exists "crypto"."main"
+    
+[0m22:37:33.901760 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m22:37:33.902967 [debug] [ThreadPool]: On create_crypto_main: COMMIT
+[0m22:37:33.902967 [debug] [ThreadPool]: Using duckdb connection "create_crypto_main"
+[0m22:37:33.902967 [debug] [ThreadPool]: On create_crypto_main: COMMIT
+[0m22:37:33.904197 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m22:37:33.904197 [debug] [ThreadPool]: On create_crypto_main: Close
+[0m22:37:33.910628 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_crypto_main'
+[0m22:37:33.916616 [debug] [ThreadPool]: Using duckdb connection "list_crypto_main"
+[0m22:37:33.917626 [debug] [ThreadPool]: On list_crypto_main: BEGIN
+[0m22:37:33.917626 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:37:33.918902 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m22:37:33.918902 [debug] [ThreadPool]: Using duckdb connection "list_crypto_main"
+[0m22:37:33.918902 [debug] [ThreadPool]: On list_crypto_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "list_crypto_main"} */
+select
+      'crypto' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'crypto'
+  
+[0m22:37:33.924325 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m22:37:33.925324 [debug] [ThreadPool]: On list_crypto_main: ROLLBACK
+[0m22:37:33.926327 [debug] [ThreadPool]: Failed to rollback 'list_crypto_main'
+[0m22:37:33.927326 [debug] [ThreadPool]: On list_crypto_main: Close
+[0m22:37:33.929321 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd7125835-2951-40ee-840f-f22f86859b0f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000224801EC2D0>]}
+[0m22:37:33.929321 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:37:33.930326 [debug] [MainThread]: On master: BEGIN
+[0m22:37:33.930326 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:37:33.931326 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m22:37:33.932324 [debug] [MainThread]: On master: COMMIT
+[0m22:37:33.932324 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:37:33.932324 [debug] [MainThread]: On master: COMMIT
+[0m22:37:33.933812 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m22:37:33.933812 [debug] [MainThread]: On master: Close
+[0m22:37:33.939715 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.mart_market_summary
+[0m22:37:33.940715 [info ] [Thread-1 (]: 1 of 1 START sql table model main.mart_market_summary .......................... [RUN]
+[0m22:37:33.941717 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.crypto_pipeline.mart_market_summary'
+[0m22:37:33.942717 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.mart_market_summary
+[0m22:37:33.952789 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.mart_market_summary"
+[0m22:37:33.953786 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.mart_market_summary
+[0m22:37:34.001222 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.mart_market_summary"
+[0m22:37:34.002198 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:37:34.003203 [debug] [Thread-1 (]: On model.crypto_pipeline.mart_market_summary: BEGIN
+[0m22:37:34.004226 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m22:37:34.005227 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m22:37:34.005227 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:37:34.006502 [debug] [Thread-1 (]: On model.crypto_pipeline.mart_market_summary: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_market_summary"} */
+
+  
+    
+    
+
+    create  table
+      "crypto"."main"."mart_market_summary__dbt_tmp"
+  
+    as (
+      -- models/marts/mart_market_summary.sql
+--
+-- Purpose: Final market summary table for dashboards and reporting.
+-- One row per coin per ingestion run.
+--
+-- This is the table stakeholders query.
+-- Column names must be self-explanatory to a non-engineer.
+-- No raw field names. No ambiguous abbreviations.
+
+with daily_returns as (
+    select * from "crypto"."main"."int_daily_returns"
+),
+
+final as (
+    select
+        -- Identity
+        coin_id,
+        coin_symbol,
+        coin_name,
+
+        -- Pricing
+        price_usd,
+        high_24h_usd,
+        low_24h_usd,
+        price_change_pct_24h,
+        price_range_pct,
+
+        -- Market standing
+        market_cap_usd,
+        market_cap_rank,
+
+        -- Volume
+        volume_24h_usd,
+        volume_to_mcap_pct,
+        volume_activity,
+
+        -- Signals
+        market_sentiment,
+
+        -- Metadata
+        last_updated_at,
+        ingested_at,
+
+        -- Pipeline audit field
+        -- Lets you know exactly when dbt wrote this row
+        -- current_timestamp as dbt_updated_at
+        timezone('UTC', current_timestamp) as dbt_updated_at
+
+    from daily_returns
+)
+
+select * from final
+    );
+  
+  
+[0m22:37:34.013953 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m22:37:34.020932 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:37:34.021932 [debug] [Thread-1 (]: On model.crypto_pipeline.mart_market_summary: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_market_summary"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'mart_market_summary'
+  
+[0m22:37:34.023933 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m22:37:34.024933 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:37:34.025933 [debug] [Thread-1 (]: On model.crypto_pipeline.mart_market_summary: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_market_summary"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'mart_market_summary'
+  
+[0m22:37:34.026932 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m22:37:34.035932 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:37:34.035932 [debug] [Thread-1 (]: On model.crypto_pipeline.mart_market_summary: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_market_summary"} */
+alter table "crypto"."main"."mart_market_summary" rename to "mart_market_summary__dbt_backup"
+[0m22:37:34.036933 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m22:37:34.041952 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:37:34.042954 [debug] [Thread-1 (]: On model.crypto_pipeline.mart_market_summary: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_market_summary"} */
+alter table "crypto"."main"."mart_market_summary__dbt_tmp" rename to "mart_market_summary"
+[0m22:37:34.043958 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m22:37:34.061952 [debug] [Thread-1 (]: On model.crypto_pipeline.mart_market_summary: COMMIT
+[0m22:37:34.062953 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:37:34.063941 [debug] [Thread-1 (]: On model.crypto_pipeline.mart_market_summary: COMMIT
+[0m22:37:34.068201 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m22:37:34.075235 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:37:34.075235 [debug] [Thread-1 (]: On model.crypto_pipeline.mart_market_summary: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_market_summary"} */
+
+      drop table if exists "crypto"."main"."mart_market_summary__dbt_backup" cascade
+    
+[0m22:37:34.078363 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m22:37:34.081849 [debug] [Thread-1 (]: On model.crypto_pipeline.mart_market_summary: Close
+[0m22:37:34.083886 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd7125835-2951-40ee-840f-f22f86859b0f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000224809FE790>]}
+[0m22:37:34.084883 [info ] [Thread-1 (]: 1 of 1 OK created sql table model main.mart_market_summary ..................... [[32mOK[0m in 0.14s]
+[0m22:37:34.085884 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.mart_market_summary
+[0m22:37:34.087883 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:37:34.088883 [debug] [MainThread]: On master: BEGIN
+[0m22:37:34.088883 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m22:37:34.089883 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m22:37:34.090883 [debug] [MainThread]: On master: COMMIT
+[0m22:37:34.090883 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:37:34.091884 [debug] [MainThread]: On master: COMMIT
+[0m22:37:34.091884 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m22:37:34.092883 [debug] [MainThread]: On master: Close
+[0m22:37:34.093883 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:37:34.094887 [debug] [MainThread]: Connection 'create_crypto_main' was properly closed.
+[0m22:37:34.094887 [debug] [MainThread]: Connection 'list_crypto_main' was properly closed.
+[0m22:37:34.095887 [debug] [MainThread]: Connection 'model.crypto_pipeline.mart_market_summary' was properly closed.
+[0m22:37:34.096887 [info ] [MainThread]: 
+[0m22:37:34.096887 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.36 seconds (0.36s).
+[0m22:37:34.098886 [debug] [MainThread]: Command end result
+[0m22:37:34.130228 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\manifest.json
+[0m22:37:34.135230 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\semantic_manifest.json
+[0m22:37:34.144231 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\run_results.json
+[0m22:37:34.145236 [info ] [MainThread]: 
+[0m22:37:34.147234 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:37:34.148596 [info ] [MainThread]: 
+[0m22:37:34.150595 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m22:37:34.151706 [debug] [MainThread]: Command `dbt run` succeeded at 22:37:34.151706 after 1.50 seconds
+[0m22:37:34.152708 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000224BDBE5DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000224C2D25990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000224C401CE10>]}
+[0m22:37:34.153706 [debug] [MainThread]: Flushing usage events
+[0m22:37:35.406011 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:41:13.716419 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000253DF49D750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000253DF49DD10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000253DF49C790>]}
+
+
+============================== 22:41:13.722414 | ff4bf92d-246e-45cc-9a18-ee3d80c49db8 ==============================
+[0m22:41:13.722414 [info ] [MainThread]: Running with dbt=1.11.7
+[0m22:41:13.723413 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Abideen Bello\\.dbt', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Abideen Bello\\dbt_projects\\crypto_pipeline\\dbt_project\\logs'}
+[0m22:41:14.065709 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ff4bf92d-246e-45cc-9a18-ee3d80c49db8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000253E052ADD0>]}
+[0m22:41:14.157546 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ff4bf92d-246e-45cc-9a18-ee3d80c49db8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000253DBBE5090>]}
+[0m22:41:14.162203 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m22:41:14.501561 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m22:41:14.806425 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:41:14.807425 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m22:41:14.808427 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:41:14.880219 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ff4bf92d-246e-45cc-9a18-ee3d80c49db8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025380508910>]}
+[0m22:41:15.028954 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\manifest.json
+[0m22:41:15.033370 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\semantic_manifest.json
+[0m22:41:15.062170 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ff4bf92d-246e-45cc-9a18-ee3d80c49db8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002538073FFD0>]}
+[0m22:41:15.063167 [info ] [MainThread]: Found 3 models, 7 data tests, 1 source, 474 macros
+[0m22:41:15.064166 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ff4bf92d-246e-45cc-9a18-ee3d80c49db8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000253803C9890>]}
+[0m22:41:15.067527 [info ] [MainThread]: 
+[0m22:41:15.068527 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:41:15.069997 [info ] [MainThread]: 
+[0m22:41:15.071248 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m22:41:15.079248 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_crypto'
+[0m22:41:15.257058 [debug] [ThreadPool]: Using duckdb connection "list_crypto"
+[0m22:41:15.258060 [debug] [ThreadPool]: On list_crypto: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "list_crypto"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"crypto"'
+    
+  
+  
+[0m22:41:15.259073 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:41:15.287061 [debug] [ThreadPool]: SQL status: OK in 0.027 seconds
+[0m22:41:15.289064 [debug] [ThreadPool]: On list_crypto: Close
+[0m22:41:15.291063 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_crypto, now create_crypto_main)
+[0m22:41:15.292061 [debug] [ThreadPool]: Creating schema "database: "crypto"
+schema: "main"
+"
+[0m22:41:15.302103 [debug] [ThreadPool]: Using duckdb connection "create_crypto_main"
+[0m22:41:15.303106 [debug] [ThreadPool]: On create_crypto_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "create_crypto_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='crypto'
+        and type='sqlite'
+    
+  
+[0m22:41:15.304102 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:41:15.306103 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m22:41:15.309101 [debug] [ThreadPool]: Using duckdb connection "create_crypto_main"
+[0m22:41:15.310103 [debug] [ThreadPool]: On create_crypto_main: BEGIN
+[0m22:41:15.311101 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m22:41:15.312101 [debug] [ThreadPool]: Using duckdb connection "create_crypto_main"
+[0m22:41:15.312101 [debug] [ThreadPool]: On create_crypto_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "create_crypto_main"} */
+
+    
+    
+        create schema if not exists "crypto"."main"
+    
+[0m22:41:15.314101 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m22:41:15.315102 [debug] [ThreadPool]: On create_crypto_main: COMMIT
+[0m22:41:15.316429 [debug] [ThreadPool]: Using duckdb connection "create_crypto_main"
+[0m22:41:15.316429 [debug] [ThreadPool]: On create_crypto_main: COMMIT
+[0m22:41:15.317927 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m22:41:15.318945 [debug] [ThreadPool]: On create_crypto_main: Close
+[0m22:41:15.321449 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_crypto_main'
+[0m22:41:15.330443 [debug] [ThreadPool]: Using duckdb connection "list_crypto_main"
+[0m22:41:15.331443 [debug] [ThreadPool]: On list_crypto_main: BEGIN
+[0m22:41:15.332444 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:41:15.333441 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m22:41:15.334442 [debug] [ThreadPool]: Using duckdb connection "list_crypto_main"
+[0m22:41:15.334442 [debug] [ThreadPool]: On list_crypto_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "list_crypto_main"} */
+select
+      'crypto' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'crypto'
+  
+[0m22:41:15.342441 [debug] [ThreadPool]: SQL status: OK in 0.007 seconds
+[0m22:41:15.345731 [debug] [ThreadPool]: On list_crypto_main: ROLLBACK
+[0m22:41:15.347745 [debug] [ThreadPool]: Failed to rollback 'list_crypto_main'
+[0m22:41:15.348744 [debug] [ThreadPool]: On list_crypto_main: Close
+[0m22:41:15.350743 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ff4bf92d-246e-45cc-9a18-ee3d80c49db8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000253805089D0>]}
+[0m22:41:15.350743 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:41:15.352207 [debug] [MainThread]: On master: BEGIN
+[0m22:41:15.352207 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:41:15.354417 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m22:41:15.354417 [debug] [MainThread]: On master: COMMIT
+[0m22:41:15.355465 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:41:15.356465 [debug] [MainThread]: On master: COMMIT
+[0m22:41:15.357465 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m22:41:15.357465 [debug] [MainThread]: On master: Close
+[0m22:41:15.362472 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.stg_coin_prices
+[0m22:41:15.363465 [info ] [Thread-1 (]: 1 of 3 START sql view model main.stg_coin_prices ............................... [RUN]
+[0m22:41:15.365467 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.crypto_pipeline.stg_coin_prices'
+[0m22:41:15.365467 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.stg_coin_prices
+[0m22:41:15.380465 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.stg_coin_prices"
+[0m22:41:15.383468 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.stg_coin_prices
+[0m22:41:15.429919 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.stg_coin_prices"
+[0m22:41:15.432923 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.stg_coin_prices"
+[0m22:41:15.433919 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: BEGIN
+[0m22:41:15.434939 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m22:41:15.435938 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m22:41:15.437378 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.stg_coin_prices"
+[0m22:41:15.438392 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_coin_prices"} */
+
+  
+  create view "crypto"."main"."stg_coin_prices__dbt_tmp" as (
+    -- models/staging/stg_coin_prices.sql
+--
+-- Purpose: Clean and rename raw CoinGecko data.
+-- This is the ONLY place raw column names are referenced.
+-- Every model downstream uses these clean names.
+--
+-- If CoinGecko ever renames a field, we fix it here.
+-- Nothing else needs to change.
+
+with source as (
+    select * from "crypto"."raw"."coin_prices"
+),
+
+renamed as (
+    select
+        -- Identifiers
+        id                                          as coin_id,
+        symbol                                      as coin_symbol,
+        name                                        as coin_name,
+
+        -- Pricing
+        cast(current_price as double)               as price_usd,
+        cast(high_24h as double)                    as high_24h_usd,
+        cast(low_24h as double)                     as low_24h_usd,
+
+        -- Market data
+        cast(market_cap as double)                  as market_cap_usd,
+        cast(market_cap_rank as integer)            as market_cap_rank,
+        cast(total_volume as double)                as volume_24h_usd,
+
+        -- Price changes
+        cast(price_change_24h as double)            as price_change_24h_usd,
+        cast(price_change_percentage_24h as double) as price_change_pct_24h,
+
+        -- Supply
+        cast(circulating_supply as double)          as circulating_supply,
+        cast(total_supply as double)                as total_supply,
+
+        -- Timestamps
+        cast(last_updated as timestamp)             as last_updated_at,
+        cast(ingested_at as timestamp with time zone)
+                                                    as ingested_at
+
+    from source
+)
+
+select * from renamed
+  );
+
+[0m22:41:15.440638 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m22:41:15.450179 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.stg_coin_prices"
+[0m22:41:15.451178 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_coin_prices"} */
+alter view "crypto"."main"."stg_coin_prices" rename to "stg_coin_prices__dbt_backup"
+[0m22:41:15.452179 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m22:41:15.458179 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.stg_coin_prices"
+[0m22:41:15.459178 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_coin_prices"} */
+alter view "crypto"."main"."stg_coin_prices__dbt_tmp" rename to "stg_coin_prices"
+[0m22:41:15.461177 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m22:41:15.483093 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: COMMIT
+[0m22:41:15.483093 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.stg_coin_prices"
+[0m22:41:15.484549 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: COMMIT
+[0m22:41:15.488802 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m22:41:15.499483 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.stg_coin_prices"
+[0m22:41:15.500489 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_coin_prices"} */
+
+      drop view if exists "crypto"."main"."stg_coin_prices__dbt_backup" cascade
+    
+[0m22:41:15.503478 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m22:41:15.507490 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: Close
+[0m22:41:15.510492 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ff4bf92d-246e-45cc-9a18-ee3d80c49db8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000253809B4A50>]}
+[0m22:41:15.512135 [info ] [Thread-1 (]: 1 of 3 OK created sql view model main.stg_coin_prices .......................... [[32mOK[0m in 0.14s]
+[0m22:41:15.513145 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.stg_coin_prices
+[0m22:41:15.515354 [debug] [Thread-3 (]: Began running node model.crypto_pipeline.int_daily_returns
+[0m22:41:15.516354 [info ] [Thread-3 (]: 2 of 3 START sql view model main.int_daily_returns ............................. [RUN]
+[0m22:41:15.518826 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.crypto_pipeline.int_daily_returns'
+[0m22:41:15.519824 [debug] [Thread-3 (]: Began compiling node model.crypto_pipeline.int_daily_returns
+[0m22:41:15.525025 [debug] [Thread-3 (]: Writing injected SQL for node "model.crypto_pipeline.int_daily_returns"
+[0m22:41:15.526029 [debug] [Thread-3 (]: Began executing node model.crypto_pipeline.int_daily_returns
+[0m22:41:15.535840 [debug] [Thread-3 (]: Writing runtime sql for node "model.crypto_pipeline.int_daily_returns"
+[0m22:41:15.537839 [debug] [Thread-3 (]: Using duckdb connection "model.crypto_pipeline.int_daily_returns"
+[0m22:41:15.538838 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: BEGIN
+[0m22:41:15.538838 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m22:41:15.540839 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m22:41:15.541839 [debug] [Thread-3 (]: Using duckdb connection "model.crypto_pipeline.int_daily_returns"
+[0m22:41:15.542839 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.int_daily_returns"} */
+
+  
+  create view "crypto"."main"."int_daily_returns__dbt_tmp" as (
+    -- models/intermediate/int_daily_returns.sql
+--
+-- Purpose: Calculate derived metrics per coin.
+-- Adds market sentiment classification and volume anomaly detection.
+--
+-- Why intermediate and not directly in marts?
+-- These calculations might be reused by multiple mart models.
+-- We calculate once here, reference many times downstream.
+
+with prices as (
+    select * from "crypto"."main"."stg_coin_prices"
+),
+
+with_metrics as (
+    select
+        coin_id,
+        coin_symbol,
+        coin_name,
+        price_usd,
+        high_24h_usd,
+        low_24h_usd,
+        market_cap_usd,
+        market_cap_rank,
+        volume_24h_usd,
+        price_change_pct_24h,
+        circulating_supply,
+        last_updated_at,
+        ingested_at,
+
+        -- How wide was today's price range as % of price?
+        -- High range = volatile day
+        round(
+            ((high_24h_usd - low_24h_usd) / price_usd) * 100,
+            2
+        ) as price_range_pct,
+
+        -- Volume to market cap ratio
+        -- High ratio = a lot of the coin is being traded today
+        round(
+            (volume_24h_usd / nullif(market_cap_usd, 0)) * 100,
+            2
+        ) as volume_to_mcap_pct,
+
+        -- Market sentiment based on 24h price change
+        case
+            when price_change_pct_24h >=  10 then 'strong_bullish'
+            when price_change_pct_24h >=   3 then 'bullish'
+            when price_change_pct_24h >=  -3 then 'neutral'
+            when price_change_pct_24h >= -10 then 'bearish'
+            else 'strong_bearish'
+        end as market_sentiment,
+
+        -- Is this coin showing unusual volume today?
+        case
+            when (volume_24h_usd / nullif(market_cap_usd, 0)) > 0.3
+                then 'very_high'
+            when (volume_24h_usd / nullif(market_cap_usd, 0)) > 0.1
+                then 'high'
+            when (volume_24h_usd / nullif(market_cap_usd, 0)) > 0.05
+                then 'normal'
+            else 'low'
+        end as volume_activity
+
+    from prices
+)
+
+select * from with_metrics
+  );
+
+[0m22:41:15.547877 [debug] [Thread-3 (]: SQL status: OK in 0.004 seconds
+[0m22:41:15.555937 [debug] [Thread-3 (]: Using duckdb connection "model.crypto_pipeline.int_daily_returns"
+[0m22:41:15.557927 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.int_daily_returns"} */
+alter view "crypto"."main"."int_daily_returns" rename to "int_daily_returns__dbt_backup"
+[0m22:41:15.559919 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m22:41:15.568302 [debug] [Thread-3 (]: Using duckdb connection "model.crypto_pipeline.int_daily_returns"
+[0m22:41:15.569301 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.int_daily_returns"} */
+alter view "crypto"."main"."int_daily_returns__dbt_tmp" rename to "int_daily_returns"
+[0m22:41:15.571322 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m22:41:15.574351 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: COMMIT
+[0m22:41:15.575350 [debug] [Thread-3 (]: Using duckdb connection "model.crypto_pipeline.int_daily_returns"
+[0m22:41:15.576350 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: COMMIT
+[0m22:41:15.579350 [debug] [Thread-3 (]: SQL status: OK in 0.002 seconds
+[0m22:41:15.584350 [debug] [Thread-3 (]: Using duckdb connection "model.crypto_pipeline.int_daily_returns"
+[0m22:41:15.585350 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.int_daily_returns"} */
+
+      drop view if exists "crypto"."main"."int_daily_returns__dbt_backup" cascade
+    
+[0m22:41:15.587350 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m22:41:15.590371 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: Close
+[0m22:41:15.591369 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ff4bf92d-246e-45cc-9a18-ee3d80c49db8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000253809B2490>]}
+[0m22:41:15.592366 [info ] [Thread-3 (]: 2 of 3 OK created sql view model main.int_daily_returns ........................ [[32mOK[0m in 0.07s]
+[0m22:41:15.593370 [debug] [Thread-3 (]: Finished running node model.crypto_pipeline.int_daily_returns
+[0m22:41:15.594797 [debug] [Thread-2 (]: Began running node model.crypto_pipeline.mart_market_summary
+[0m22:41:15.596110 [info ] [Thread-2 (]: 3 of 3 START sql table model main.mart_market_summary .......................... [RUN]
+[0m22:41:15.598528 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.crypto_pipeline.mart_market_summary'
+[0m22:41:15.599983 [debug] [Thread-2 (]: Began compiling node model.crypto_pipeline.mart_market_summary
+[0m22:41:15.604982 [debug] [Thread-2 (]: Writing injected SQL for node "model.crypto_pipeline.mart_market_summary"
+[0m22:41:15.606983 [debug] [Thread-2 (]: Began executing node model.crypto_pipeline.mart_market_summary
+[0m22:41:15.652579 [debug] [Thread-2 (]: Writing runtime sql for node "model.crypto_pipeline.mart_market_summary"
+[0m22:41:15.654579 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:41:15.655579 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: BEGIN
+[0m22:41:15.656579 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m22:41:15.657585 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m22:41:15.658778 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:41:15.659777 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_market_summary"} */
+
+  
+    
+    
+
+    create  table
+      "crypto"."main"."mart_market_summary__dbt_tmp"
+  
+    as (
+      -- models/marts/mart_market_summary.sql
+--
+-- Purpose: Final market summary table for dashboards and reporting.
+-- One row per coin per ingestion run.
+--
+-- This is the table stakeholders query.
+-- Column names must be self-explanatory to a non-engineer.
+-- No raw field names. No ambiguous abbreviations.
+
+with daily_returns as (
+    select * from "crypto"."main"."int_daily_returns"
+),
+
+final as (
+    select
+        -- Identity
+        coin_id,
+        coin_symbol,
+        coin_name,
+
+        -- Pricing
+        price_usd,
+        high_24h_usd,
+        low_24h_usd,
+        price_change_pct_24h,
+        price_range_pct,
+
+        -- Market standing
+        market_cap_usd,
+        market_cap_rank,
+
+        -- Volume
+        volume_24h_usd,
+        volume_to_mcap_pct,
+        volume_activity,
+
+        -- Signals
+        market_sentiment,
+
+        -- Metadata
+        last_updated_at,
+        ingested_at,
+
+        -- Pipeline audit field
+        -- Lets you know exactly when dbt wrote this row
+        -- current_timestamp as dbt_updated_at
+        timezone('UTC', current_timestamp) as dbt_updated_at
+
+    from daily_returns
+)
+
+select * from final
+    );
+  
+  
+[0m22:41:15.669274 [debug] [Thread-2 (]: SQL status: OK in 0.008 seconds
+[0m22:41:15.677317 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:41:15.677317 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_market_summary"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'mart_market_summary'
+  
+[0m22:41:15.679318 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m22:41:15.681336 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:41:15.682339 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_market_summary"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'mart_market_summary'
+  
+[0m22:41:15.684338 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m22:41:15.691084 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:41:15.692082 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_market_summary"} */
+alter table "crypto"."main"."mart_market_summary" rename to "mart_market_summary__dbt_backup"
+[0m22:41:15.694083 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m22:41:15.699100 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:41:15.700102 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_market_summary"} */
+alter table "crypto"."main"."mart_market_summary__dbt_tmp" rename to "mart_market_summary"
+[0m22:41:15.702103 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m22:41:15.709215 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: COMMIT
+[0m22:41:15.710220 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:41:15.711218 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: COMMIT
+[0m22:41:15.713234 [debug] [Thread-2 (]: SQL status: OK in 0.003 seconds
+[0m22:41:15.718164 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m22:41:15.719146 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_market_summary"} */
+
+      drop table if exists "crypto"."main"."mart_market_summary__dbt_backup" cascade
+    
+[0m22:41:15.721144 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m22:41:15.723144 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: Close
+[0m22:41:15.724144 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ff4bf92d-246e-45cc-9a18-ee3d80c49db8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025381B92350>]}
+[0m22:41:15.726167 [info ] [Thread-2 (]: 3 of 3 OK created sql table model main.mart_market_summary ..................... [[32mOK[0m in 0.13s]
+[0m22:41:15.727148 [debug] [Thread-2 (]: Finished running node model.crypto_pipeline.mart_market_summary
+[0m22:41:15.729059 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:41:15.730521 [debug] [MainThread]: On master: BEGIN
+[0m22:41:15.731535 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m22:41:15.733001 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m22:41:15.734004 [debug] [MainThread]: On master: COMMIT
+[0m22:41:15.734004 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:41:15.735001 [debug] [MainThread]: On master: COMMIT
+[0m22:41:15.736201 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m22:41:15.736201 [debug] [MainThread]: On master: Close
+[0m22:41:15.737623 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:41:15.738639 [debug] [MainThread]: Connection 'create_crypto_main' was properly closed.
+[0m22:41:15.738639 [debug] [MainThread]: Connection 'list_crypto_main' was properly closed.
+[0m22:41:15.739635 [debug] [MainThread]: Connection 'model.crypto_pipeline.stg_coin_prices' was properly closed.
+[0m22:41:15.740657 [debug] [MainThread]: Connection 'model.crypto_pipeline.int_daily_returns' was properly closed.
+[0m22:41:15.740657 [debug] [MainThread]: Connection 'model.crypto_pipeline.mart_market_summary' was properly closed.
+[0m22:41:15.741997 [info ] [MainThread]: 
+[0m22:41:15.741997 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 0.67 seconds (0.67s).
+[0m22:41:15.745449 [debug] [MainThread]: Command end result
+[0m22:41:15.784401 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\manifest.json
+[0m22:41:15.789405 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\semantic_manifest.json
+[0m22:41:15.800702 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\run_results.json
+[0m22:41:15.800702 [info ] [MainThread]: 
+[0m22:41:15.801718 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:41:15.802947 [info ] [MainThread]: 
+[0m22:41:15.803949 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m22:41:15.806070 [debug] [MainThread]: Command `dbt run` succeeded at 22:41:15.804946 after 2.27 seconds
+[0m22:41:15.806577 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000253DA105D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000253DF142650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000253DA147C10>]}
+[0m22:41:15.807586 [debug] [MainThread]: Flushing usage events
+[0m22:41:17.605525 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:41:21.475086 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A690C252D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A690C270D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A690C26F50>]}
+
+
+============================== 22:41:21.483641 | 43c5ba44-986d-4ac4-a730-8998d4f62663 ==============================
+[0m22:41:21.483641 [info ] [MainThread]: Running with dbt=1.11.7
+[0m22:41:21.485797 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Abideen Bello\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt test', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Abideen Bello\\dbt_projects\\crypto_pipeline\\dbt_project\\logs'}
+[0m22:41:21.996052 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '43c5ba44-986d-4ac4-a730-8998d4f62663', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A690C7C450>]}
+[0m22:41:22.094636 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '43c5ba44-986d-4ac4-a730-8998d4f62663', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A68C3454D0>]}
+[0m22:41:22.099993 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m22:41:22.511949 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m22:41:22.826389 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:41:22.828388 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m22:41:22.829388 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:41:22.969039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '43c5ba44-986d-4ac4-a730-8998d4f62663', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A690C90290>]}
+[0m22:41:23.209924 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\manifest.json
+[0m22:41:23.217630 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\semantic_manifest.json
+[0m22:41:23.356160 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '43c5ba44-986d-4ac4-a730-8998d4f62663', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A68C5DA6D0>]}
+[0m22:41:23.357428 [info ] [MainThread]: Found 3 models, 7 data tests, 1 source, 474 macros
+[0m22:41:23.358643 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '43c5ba44-986d-4ac4-a730-8998d4f62663', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A6806C2510>]}
+[0m22:41:23.365971 [info ] [MainThread]: 
+[0m22:41:23.367969 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:41:23.369971 [info ] [MainThread]: 
+[0m22:41:23.370969 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m22:41:23.379406 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_crypto_main'
+[0m22:41:23.506646 [debug] [ThreadPool]: Using duckdb connection "list_crypto_main"
+[0m22:41:23.507645 [debug] [ThreadPool]: On list_crypto_main: BEGIN
+[0m22:41:23.508645 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:41:23.545580 [debug] [ThreadPool]: SQL status: OK in 0.037 seconds
+[0m22:41:23.546676 [debug] [ThreadPool]: Using duckdb connection "list_crypto_main"
+[0m22:41:23.547697 [debug] [ThreadPool]: On list_crypto_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "list_crypto_main"} */
+select
+      'crypto' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'crypto'
+  
+[0m22:41:23.559902 [debug] [ThreadPool]: SQL status: OK in 0.010 seconds
+[0m22:41:23.561902 [debug] [ThreadPool]: On list_crypto_main: ROLLBACK
+[0m22:41:23.563900 [debug] [ThreadPool]: Failed to rollback 'list_crypto_main'
+[0m22:41:23.565248 [debug] [ThreadPool]: On list_crypto_main: Close
+[0m22:41:23.568343 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '43c5ba44-986d-4ac4-a730-8998d4f62663', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A690C91BD0>]}
+[0m22:41:23.568343 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:41:23.569707 [debug] [MainThread]: On master: BEGIN
+[0m22:41:23.570756 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:41:23.571986 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m22:41:23.571986 [debug] [MainThread]: On master: COMMIT
+[0m22:41:23.573489 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:41:23.573489 [debug] [MainThread]: On master: COMMIT
+[0m22:41:23.575961 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m22:41:23.576962 [debug] [MainThread]: On master: Close
+[0m22:41:23.587137 [debug] [Thread-1 (]: Began running node test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde
+[0m22:41:23.588202 [debug] [Thread-2 (]: Began running node test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2
+[0m22:41:23.589205 [debug] [Thread-3 (]: Began running node test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557
+[0m22:41:23.590203 [debug] [Thread-4 (]: Began running node test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910
+[0m22:41:23.591204 [info ] [Thread-1 (]: 1 of 7 START test not_null_stg_coin_prices_coin_id ............................. [RUN]
+[0m22:41:23.592202 [info ] [Thread-2 (]: 2 of 7 START test not_null_stg_coin_prices_coin_symbol ......................... [RUN]
+[0m22:41:23.593202 [info ] [Thread-3 (]: 3 of 7 START test not_null_stg_coin_prices_ingested_at ......................... [RUN]
+[0m22:41:23.595202 [info ] [Thread-4 (]: 4 of 7 START test not_null_stg_coin_prices_market_cap_rank ..................... [RUN]
+[0m22:41:23.596201 [debug] [Thread-1 (]: Acquiring new duckdb connection 'test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde'
+[0m22:41:23.597204 [debug] [Thread-2 (]: Acquiring new duckdb connection 'test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2'
+[0m22:41:23.599205 [debug] [Thread-3 (]: Acquiring new duckdb connection 'test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557'
+[0m22:41:23.601205 [debug] [Thread-4 (]: Acquiring new duckdb connection 'test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910'
+[0m22:41:23.602203 [debug] [Thread-1 (]: Began compiling node test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde
+[0m22:41:23.603204 [debug] [Thread-2 (]: Began compiling node test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2
+[0m22:41:23.604204 [debug] [Thread-3 (]: Began compiling node test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557
+[0m22:41:23.605203 [debug] [Thread-4 (]: Began compiling node test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910
+[0m22:41:23.640213 [debug] [Thread-1 (]: Writing injected SQL for node "test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde"
+[0m22:41:23.651167 [debug] [Thread-2 (]: Writing injected SQL for node "test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2"
+[0m22:41:23.663167 [debug] [Thread-3 (]: Writing injected SQL for node "test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557"
+[0m22:41:23.675175 [debug] [Thread-4 (]: Writing injected SQL for node "test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910"
+[0m22:41:23.677166 [debug] [Thread-1 (]: Began executing node test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde
+[0m22:41:23.679165 [debug] [Thread-2 (]: Began executing node test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2
+[0m22:41:23.679165 [debug] [Thread-3 (]: Began executing node test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557
+[0m22:41:23.716328 [debug] [Thread-1 (]: Writing runtime sql for node "test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde"
+[0m22:41:23.724332 [debug] [Thread-2 (]: Writing runtime sql for node "test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2"
+[0m22:41:23.725328 [debug] [Thread-4 (]: Began executing node test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910
+[0m22:41:23.731325 [debug] [Thread-3 (]: Writing runtime sql for node "test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557"
+[0m22:41:23.739325 [debug] [Thread-4 (]: Writing runtime sql for node "test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910"
+[0m22:41:23.739325 [debug] [Thread-1 (]: Using duckdb connection "test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde"
+[0m22:41:23.741816 [debug] [Thread-2 (]: Using duckdb connection "test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2"
+[0m22:41:23.743925 [debug] [Thread-3 (]: Using duckdb connection "test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557"
+[0m22:41:23.744925 [debug] [Thread-1 (]: On test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde: BEGIN
+[0m22:41:23.745924 [debug] [Thread-2 (]: On test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2: BEGIN
+[0m22:41:23.747231 [debug] [Thread-4 (]: Using duckdb connection "test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910"
+[0m22:41:23.748245 [debug] [Thread-3 (]: On test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557: BEGIN
+[0m22:41:23.750248 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m22:41:23.750248 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m22:41:23.752544 [debug] [Thread-4 (]: On test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910: BEGIN
+[0m22:41:23.753543 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m22:41:23.755546 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m22:41:23.756544 [debug] [Thread-2 (]: SQL status: OK in 0.006 seconds
+[0m22:41:23.758544 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m22:41:23.759544 [debug] [Thread-1 (]: Using duckdb connection "test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde"
+[0m22:41:23.760551 [debug] [Thread-3 (]: SQL status: OK in 0.007 seconds
+[0m22:41:23.761544 [debug] [Thread-2 (]: Using duckdb connection "test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2"
+[0m22:41:23.763544 [debug] [Thread-1 (]: On test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select coin_id
+from "crypto"."main"."stg_coin_prices"
+where coin_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:41:23.765549 [debug] [Thread-4 (]: SQL status: OK in 0.007 seconds
+[0m22:41:23.766545 [debug] [Thread-3 (]: Using duckdb connection "test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557"
+[0m22:41:23.768546 [debug] [Thread-2 (]: On test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select coin_symbol
+from "crypto"."main"."stg_coin_prices"
+where coin_symbol is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:41:23.769545 [debug] [Thread-4 (]: Using duckdb connection "test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910"
+[0m22:41:23.771546 [debug] [Thread-3 (]: On test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select ingested_at
+from "crypto"."main"."stg_coin_prices"
+where ingested_at is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:41:23.773545 [debug] [Thread-4 (]: On test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select market_cap_rank
+from "crypto"."main"."stg_coin_prices"
+where market_cap_rank is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:41:23.775543 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m22:41:23.776544 [debug] [Thread-2 (]: SQL status: OK in 0.004 seconds
+[0m22:41:23.788545 [debug] [Thread-1 (]: On test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde: ROLLBACK
+[0m22:41:23.791545 [debug] [Thread-3 (]: SQL status: OK in 0.016 seconds
+[0m22:41:23.792544 [debug] [Thread-4 (]: SQL status: OK in 0.016 seconds
+[0m22:41:23.794919 [debug] [Thread-2 (]: On test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2: ROLLBACK
+[0m22:41:23.795920 [debug] [Thread-1 (]: Failed to rollback 'test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde'
+[0m22:41:23.799820 [debug] [Thread-3 (]: On test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557: ROLLBACK
+[0m22:41:23.802817 [debug] [Thread-4 (]: On test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910: ROLLBACK
+[0m22:41:23.804820 [debug] [Thread-2 (]: Failed to rollback 'test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2'
+[0m22:41:23.805819 [debug] [Thread-1 (]: On test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde: Close
+[0m22:41:23.807820 [debug] [Thread-3 (]: Failed to rollback 'test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557'
+[0m22:41:23.808819 [debug] [Thread-4 (]: Failed to rollback 'test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910'
+[0m22:41:23.810819 [debug] [Thread-2 (]: On test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2: Close
+[0m22:41:23.813821 [debug] [Thread-3 (]: On test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557: Close
+[0m22:41:23.812820 [info ] [Thread-1 (]: 1 of 7 PASS not_null_stg_coin_prices_coin_id ................................... [[32mPASS[0m in 0.22s]
+[0m22:41:23.815820 [debug] [Thread-4 (]: On test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910: Close
+[0m22:41:23.818821 [info ] [Thread-2 (]: 2 of 7 PASS not_null_stg_coin_prices_coin_symbol ............................... [[32mPASS[0m in 0.22s]
+[0m22:41:23.822821 [debug] [Thread-1 (]: Finished running node test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde
+[0m22:41:23.820821 [info ] [Thread-3 (]: 3 of 7 PASS not_null_stg_coin_prices_ingested_at ............................... [[32mPASS[0m in 0.22s]
+[0m22:41:23.824820 [info ] [Thread-4 (]: 4 of 7 PASS not_null_stg_coin_prices_market_cap_rank ........................... [[32mPASS[0m in 0.22s]
+[0m22:41:23.826824 [debug] [Thread-2 (]: Finished running node test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2
+[0m22:41:23.828821 [debug] [Thread-1 (]: Began running node test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e
+[0m22:41:23.832820 [debug] [Thread-3 (]: Finished running node test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557
+[0m22:41:23.836820 [debug] [Thread-4 (]: Finished running node test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910
+[0m22:41:23.837820 [debug] [Thread-2 (]: Began running node test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e
+[0m22:41:23.839818 [info ] [Thread-1 (]: 5 of 7 START test not_null_stg_coin_prices_price_usd ........................... [RUN]
+[0m22:41:23.841819 [debug] [Thread-3 (]: Began running node test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12
+[0m22:41:23.845052 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde, now test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e)
+[0m22:41:23.843050 [info ] [Thread-2 (]: 6 of 7 START test not_null_stg_coin_prices_volume_24h_usd ...................... [RUN]
+[0m22:41:23.849435 [debug] [Thread-1 (]: Began compiling node test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e
+[0m22:41:23.847051 [info ] [Thread-3 (]: 7 of 7 START test unique_stg_coin_prices_coin_id ............................... [RUN]
+[0m22:41:23.851052 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2, now test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e)
+[0m22:41:23.862594 [debug] [Thread-1 (]: Writing injected SQL for node "test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e"
+[0m22:41:23.865595 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557, now test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12)
+[0m22:41:23.867597 [debug] [Thread-2 (]: Began compiling node test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e
+[0m22:41:23.870597 [debug] [Thread-3 (]: Began compiling node test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12
+[0m22:41:23.871596 [debug] [Thread-1 (]: Began executing node test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e
+[0m22:41:23.885596 [debug] [Thread-2 (]: Writing injected SQL for node "test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e"
+[0m22:41:23.906596 [debug] [Thread-3 (]: Writing injected SQL for node "test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12"
+[0m22:41:23.916594 [debug] [Thread-1 (]: Writing runtime sql for node "test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e"
+[0m22:41:23.919598 [debug] [Thread-2 (]: Began executing node test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e
+[0m22:41:23.930594 [debug] [Thread-2 (]: Writing runtime sql for node "test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e"
+[0m22:41:23.932595 [debug] [Thread-3 (]: Began executing node test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12
+[0m22:41:23.933596 [debug] [Thread-1 (]: Using duckdb connection "test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e"
+[0m22:41:23.940594 [debug] [Thread-3 (]: Writing runtime sql for node "test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12"
+[0m22:41:23.942597 [debug] [Thread-1 (]: On test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e: BEGIN
+[0m22:41:23.944013 [debug] [Thread-2 (]: Using duckdb connection "test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e"
+[0m22:41:23.946015 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:41:23.947176 [debug] [Thread-2 (]: On test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e: BEGIN
+[0m22:41:23.948175 [debug] [Thread-3 (]: Using duckdb connection "test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12"
+[0m22:41:23.950180 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m22:41:23.951180 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m22:41:23.953176 [debug] [Thread-3 (]: On test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12: BEGIN
+[0m22:41:23.954175 [debug] [Thread-1 (]: Using duckdb connection "test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e"
+[0m22:41:23.955174 [debug] [Thread-2 (]: SQL status: OK in 0.005 seconds
+[0m22:41:23.956174 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m22:41:23.957175 [debug] [Thread-1 (]: On test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select price_usd
+from "crypto"."main"."stg_coin_prices"
+where price_usd is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:41:23.958174 [debug] [Thread-2 (]: Using duckdb connection "test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e"
+[0m22:41:23.960176 [debug] [Thread-3 (]: SQL status: OK in 0.004 seconds
+[0m22:41:23.961574 [debug] [Thread-2 (]: On test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select volume_24h_usd
+from "crypto"."main"."stg_coin_prices"
+where volume_24h_usd is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:41:23.962576 [debug] [Thread-3 (]: Using duckdb connection "test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12"
+[0m22:41:23.963575 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m22:41:23.965575 [debug] [Thread-3 (]: On test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    coin_id as unique_field,
+    count(*) as n_records
+
+from "crypto"."main"."stg_coin_prices"
+where coin_id is not null
+group by coin_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:41:23.969573 [debug] [Thread-1 (]: On test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e: ROLLBACK
+[0m22:41:23.969573 [debug] [Thread-2 (]: SQL status: OK in 0.005 seconds
+[0m22:41:23.972573 [debug] [Thread-1 (]: Failed to rollback 'test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e'
+[0m22:41:23.975574 [debug] [Thread-2 (]: On test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e: ROLLBACK
+[0m22:41:23.976576 [debug] [Thread-1 (]: On test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e: Close
+[0m22:41:23.978574 [debug] [Thread-2 (]: Failed to rollback 'test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e'
+[0m22:41:23.982573 [debug] [Thread-2 (]: On test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e: Close
+[0m22:41:23.983574 [debug] [Thread-3 (]: SQL status: OK in 0.013 seconds
+[0m22:41:23.980574 [info ] [Thread-1 (]: 5 of 7 PASS not_null_stg_coin_prices_price_usd ................................. [[32mPASS[0m in 0.14s]
+[0m22:41:23.986576 [info ] [Thread-2 (]: 6 of 7 PASS not_null_stg_coin_prices_volume_24h_usd ............................ [[32mPASS[0m in 0.13s]
+[0m22:41:23.988589 [debug] [Thread-1 (]: Finished running node test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e
+[0m22:41:23.991593 [debug] [Thread-3 (]: On test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12: ROLLBACK
+[0m22:41:23.993698 [debug] [Thread-2 (]: Finished running node test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e
+[0m22:41:23.995696 [debug] [Thread-3 (]: Failed to rollback 'test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12'
+[0m22:41:23.996696 [debug] [Thread-3 (]: On test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12: Close
+[0m22:41:23.999130 [info ] [Thread-3 (]: 7 of 7 PASS unique_stg_coin_prices_coin_id ..................................... [[32mPASS[0m in 0.13s]
+[0m22:41:24.002132 [debug] [Thread-3 (]: Finished running node test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12
+[0m22:41:24.005130 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:41:24.006130 [debug] [MainThread]: On master: BEGIN
+[0m22:41:24.007129 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m22:41:24.008132 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m22:41:24.009129 [debug] [MainThread]: On master: COMMIT
+[0m22:41:24.010130 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:41:24.011129 [debug] [MainThread]: On master: COMMIT
+[0m22:41:24.012128 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m22:41:24.014130 [debug] [MainThread]: On master: Close
+[0m22:41:24.018130 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:41:24.019131 [debug] [MainThread]: Connection 'list_crypto_main' was properly closed.
+[0m22:41:24.020130 [debug] [MainThread]: Connection 'test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e' was properly closed.
+[0m22:41:24.021131 [debug] [MainThread]: Connection 'test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e' was properly closed.
+[0m22:41:24.022132 [debug] [MainThread]: Connection 'test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12' was properly closed.
+[0m22:41:24.023130 [debug] [MainThread]: Connection 'test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910' was properly closed.
+[0m22:41:24.024130 [info ] [MainThread]: 
+[0m22:41:24.025129 [info ] [MainThread]: Finished running 7 data tests in 0 hours 0 minutes and 0.65 seconds (0.65s).
+[0m22:41:24.028132 [debug] [MainThread]: Command end result
+[0m22:41:24.090308 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\manifest.json
+[0m22:41:24.099307 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\semantic_manifest.json
+[0m22:41:24.117699 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\run_results.json
+[0m22:41:24.119112 [info ] [MainThread]: 
+[0m22:41:24.120112 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:41:24.122168 [info ] [MainThread]: 
+[0m22:41:24.123166 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=7
+[0m22:41:24.126245 [debug] [MainThread]: Command `dbt test` succeeded at 22:41:24.126245 after 2.87 seconds
+[0m22:41:24.127245 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A68A815D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A68A856FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A68A856F90>]}
+[0m22:41:24.129243 [debug] [MainThread]: Flushing usage events
+[0m22:41:25.355455 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:13:03.344162 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000255F4932790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000255F5958E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000255F59591D0>]}
+
+
+============================== 23:13:03.351509 | 84f7c6ff-35cd-42ac-9211-121dff49c4d2 ==============================
+[0m23:13:03.351509 [info ] [MainThread]: Running with dbt=1.11.7
+[0m23:13:03.353488 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Abideen Bello\\.dbt', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Abideen Bello\\dbt_projects\\crypto_pipeline\\dbt_project\\logs'}
+[0m23:13:03.682500 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '84f7c6ff-35cd-42ac-9211-121dff49c4d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000255F4913210>]}
+[0m23:13:03.761192 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '84f7c6ff-35cd-42ac-9211-121dff49c4d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000255F1077910>]}
+[0m23:13:03.766193 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m23:13:04.118234 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m23:13:04.327179 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:13:04.328179 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m23:13:04.329178 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:13:04.397565 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '84f7c6ff-35cd-42ac-9211-121dff49c4d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000255803C4510>]}
+[0m23:13:04.546228 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\manifest.json
+[0m23:13:04.552232 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\semantic_manifest.json
+[0m23:13:04.587578 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '84f7c6ff-35cd-42ac-9211-121dff49c4d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002558073BA10>]}
+[0m23:13:04.589080 [info ] [MainThread]: Found 3 models, 7 data tests, 1 source, 474 macros
+[0m23:13:04.589588 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '84f7c6ff-35cd-42ac-9211-121dff49c4d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000255806A1610>]}
+[0m23:13:04.592623 [info ] [MainThread]: 
+[0m23:13:04.593623 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m23:13:04.594625 [info ] [MainThread]: 
+[0m23:13:04.594625 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m23:13:04.603083 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_crypto'
+[0m23:13:04.765407 [debug] [ThreadPool]: Using duckdb connection "list_crypto"
+[0m23:13:04.766408 [debug] [ThreadPool]: On list_crypto: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "list_crypto"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"crypto"'
+    
+  
+  
+[0m23:13:04.767409 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:13:04.802935 [debug] [ThreadPool]: SQL status: OK in 0.036 seconds
+[0m23:13:04.805937 [debug] [ThreadPool]: On list_crypto: Close
+[0m23:13:04.807938 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_crypto, now create_crypto_main)
+[0m23:13:04.808938 [debug] [ThreadPool]: Creating schema "database: "crypto"
+schema: "main"
+"
+[0m23:13:04.819249 [debug] [ThreadPool]: Using duckdb connection "create_crypto_main"
+[0m23:13:04.819249 [debug] [ThreadPool]: On create_crypto_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "create_crypto_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='crypto'
+        and type='sqlite'
+    
+  
+[0m23:13:04.820245 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:13:04.822413 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m23:13:04.825783 [debug] [ThreadPool]: Using duckdb connection "create_crypto_main"
+[0m23:13:04.827068 [debug] [ThreadPool]: On create_crypto_main: BEGIN
+[0m23:13:04.828068 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m23:13:04.828068 [debug] [ThreadPool]: Using duckdb connection "create_crypto_main"
+[0m23:13:04.829511 [debug] [ThreadPool]: On create_crypto_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "create_crypto_main"} */
+
+    
+    
+        create schema if not exists "crypto"."main"
+    
+[0m23:13:04.830507 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m23:13:04.832505 [debug] [ThreadPool]: On create_crypto_main: COMMIT
+[0m23:13:04.833508 [debug] [ThreadPool]: Using duckdb connection "create_crypto_main"
+[0m23:13:04.834506 [debug] [ThreadPool]: On create_crypto_main: COMMIT
+[0m23:13:04.835506 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m23:13:04.836507 [debug] [ThreadPool]: On create_crypto_main: Close
+[0m23:13:04.838506 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_crypto_main'
+[0m23:13:04.847507 [debug] [ThreadPool]: Using duckdb connection "list_crypto_main"
+[0m23:13:04.848507 [debug] [ThreadPool]: On list_crypto_main: BEGIN
+[0m23:13:04.849507 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:13:04.850507 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m23:13:04.851506 [debug] [ThreadPool]: Using duckdb connection "list_crypto_main"
+[0m23:13:04.851506 [debug] [ThreadPool]: On list_crypto_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "list_crypto_main"} */
+select
+      'crypto' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'crypto'
+  
+[0m23:13:04.865505 [debug] [ThreadPool]: SQL status: OK in 0.013 seconds
+[0m23:13:04.868663 [debug] [ThreadPool]: On list_crypto_main: ROLLBACK
+[0m23:13:04.870664 [debug] [ThreadPool]: Failed to rollback 'list_crypto_main'
+[0m23:13:04.871664 [debug] [ThreadPool]: On list_crypto_main: Close
+[0m23:13:04.873667 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '84f7c6ff-35cd-42ac-9211-121dff49c4d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000255F59BBED0>]}
+[0m23:13:04.874665 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:13:04.874665 [debug] [MainThread]: On master: BEGIN
+[0m23:13:04.875704 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:13:04.877089 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m23:13:04.877089 [debug] [MainThread]: On master: COMMIT
+[0m23:13:04.878670 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:13:04.878670 [debug] [MainThread]: On master: COMMIT
+[0m23:13:04.879680 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m23:13:04.880680 [debug] [MainThread]: On master: Close
+[0m23:13:04.888312 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.stg_coin_prices
+[0m23:13:04.889313 [info ] [Thread-1 (]: 1 of 3 START sql view model main.stg_coin_prices ............................... [RUN]
+[0m23:13:04.891311 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.crypto_pipeline.stg_coin_prices'
+[0m23:13:04.892311 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.stg_coin_prices
+[0m23:13:04.904928 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.stg_coin_prices"
+[0m23:13:04.906988 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.stg_coin_prices
+[0m23:13:04.949022 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.stg_coin_prices"
+[0m23:13:04.951022 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.stg_coin_prices"
+[0m23:13:04.952021 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: BEGIN
+[0m23:13:04.953020 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:13:04.954022 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m23:13:04.956021 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.stg_coin_prices"
+[0m23:13:04.956021 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_coin_prices"} */
+
+  
+  create view "crypto"."main"."stg_coin_prices__dbt_tmp" as (
+    -- models/staging/stg_coin_prices.sql
+--
+-- Purpose: Clean and rename raw CoinGecko data.
+-- This is the ONLY place raw column names are referenced.
+-- Every model downstream uses these clean names.
+--
+-- If CoinGecko ever renames a field, we fix it here.
+-- Nothing else needs to change.
+
+with source as (
+    select * from "crypto"."raw"."coin_prices"
+),
+
+renamed as (
+    select
+        -- Identifiers
+        id                                          as coin_id,
+        symbol                                      as coin_symbol,
+        name                                        as coin_name,
+
+        -- Pricing
+        cast(current_price as double)               as price_usd,
+        cast(high_24h as double)                    as high_24h_usd,
+        cast(low_24h as double)                     as low_24h_usd,
+
+        -- Market data
+        cast(market_cap as double)                  as market_cap_usd,
+        cast(market_cap_rank as integer)            as market_cap_rank,
+        cast(total_volume as double)                as volume_24h_usd,
+
+        -- Price changes
+        cast(price_change_24h as double)            as price_change_24h_usd,
+        cast(price_change_percentage_24h as double) as price_change_pct_24h,
+
+        -- Supply
+        cast(circulating_supply as double)          as circulating_supply,
+        cast(total_supply as double)                as total_supply,
+
+        -- Timestamps
+        cast(last_updated as timestamp)             as last_updated_at,
+        cast(ingested_at as timestamp with time zone)
+                                                    as ingested_at
+
+    from source
+)
+
+select * from renamed
+  );
+
+[0m23:13:04.962020 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m23:13:04.971491 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.stg_coin_prices"
+[0m23:13:04.972517 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_coin_prices"} */
+alter view "crypto"."main"."stg_coin_prices" rename to "stg_coin_prices__dbt_backup"
+[0m23:13:04.975645 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m23:13:04.982692 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.stg_coin_prices"
+[0m23:13:04.983696 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_coin_prices"} */
+alter view "crypto"."main"."stg_coin_prices__dbt_tmp" rename to "stg_coin_prices"
+[0m23:13:04.984692 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m23:13:05.000593 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: COMMIT
+[0m23:13:05.002597 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.stg_coin_prices"
+[0m23:13:05.003599 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: COMMIT
+[0m23:13:05.008597 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m23:13:05.016597 [debug] [Thread-1 (]: Using duckdb connection "model.crypto_pipeline.stg_coin_prices"
+[0m23:13:05.018606 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_coin_prices"} */
+
+      drop view if exists "crypto"."main"."stg_coin_prices__dbt_backup" cascade
+    
+[0m23:13:05.020844 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m23:13:05.024256 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_coin_prices: Close
+[0m23:13:05.027255 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '84f7c6ff-35cd-42ac-9211-121dff49c4d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025580665390>]}
+[0m23:13:05.028256 [info ] [Thread-1 (]: 1 of 3 OK created sql view model main.stg_coin_prices .......................... [[32mOK[0m in 0.13s]
+[0m23:13:05.030240 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.stg_coin_prices
+[0m23:13:05.031278 [debug] [Thread-3 (]: Began running node model.crypto_pipeline.int_daily_returns
+[0m23:13:05.032803 [info ] [Thread-3 (]: 2 of 3 START sql view model main.int_daily_returns ............................. [RUN]
+[0m23:13:05.033813 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.crypto_pipeline.int_daily_returns'
+[0m23:13:05.034812 [debug] [Thread-3 (]: Began compiling node model.crypto_pipeline.int_daily_returns
+[0m23:13:05.040810 [debug] [Thread-3 (]: Writing injected SQL for node "model.crypto_pipeline.int_daily_returns"
+[0m23:13:05.042812 [debug] [Thread-3 (]: Began executing node model.crypto_pipeline.int_daily_returns
+[0m23:13:05.048810 [debug] [Thread-3 (]: Writing runtime sql for node "model.crypto_pipeline.int_daily_returns"
+[0m23:13:05.050812 [debug] [Thread-3 (]: Using duckdb connection "model.crypto_pipeline.int_daily_returns"
+[0m23:13:05.051813 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: BEGIN
+[0m23:13:05.052814 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m23:13:05.053811 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m23:13:05.055185 [debug] [Thread-3 (]: Using duckdb connection "model.crypto_pipeline.int_daily_returns"
+[0m23:13:05.055185 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.int_daily_returns"} */
+
+  
+  create view "crypto"."main"."int_daily_returns__dbt_tmp" as (
+    -- models/intermediate/int_daily_returns.sql
+--
+-- Purpose: Calculate derived metrics per coin.
+-- Adds market sentiment classification and volume anomaly detection.
+--
+-- Why intermediate and not directly in marts?
+-- These calculations might be reused by multiple mart models.
+-- We calculate once here, reference many times downstream.
+
+with prices as (
+    select * from "crypto"."main"."stg_coin_prices"
+),
+
+with_metrics as (
+    select
+        coin_id,
+        coin_symbol,
+        coin_name,
+        price_usd,
+        high_24h_usd,
+        low_24h_usd,
+        market_cap_usd,
+        market_cap_rank,
+        volume_24h_usd,
+        price_change_pct_24h,
+        circulating_supply,
+        last_updated_at,
+        ingested_at,
+
+        -- How wide was today's price range as % of price?
+        -- High range = volatile day
+        round(
+            ((high_24h_usd - low_24h_usd) / price_usd) * 100,
+            2
+        ) as price_range_pct,
+
+        -- Volume to market cap ratio
+        -- High ratio = a lot of the coin is being traded today
+        round(
+            (volume_24h_usd / nullif(market_cap_usd, 0)) * 100,
+            2
+        ) as volume_to_mcap_pct,
+
+        -- Market sentiment based on 24h price change
+        case
+            when price_change_pct_24h >=  10 then 'strong_bullish'
+            when price_change_pct_24h >=   3 then 'bullish'
+            when price_change_pct_24h >=  -3 then 'neutral'
+            when price_change_pct_24h >= -10 then 'bearish'
+            else 'strong_bearish'
+        end as market_sentiment,
+
+        -- Is this coin showing unusual volume today?
+        case
+            when (volume_24h_usd / nullif(market_cap_usd, 0)) > 0.3
+                then 'very_high'
+            when (volume_24h_usd / nullif(market_cap_usd, 0)) > 0.1
+                then 'high'
+            when (volume_24h_usd / nullif(market_cap_usd, 0)) > 0.05
+                then 'normal'
+            else 'low'
+        end as volume_activity
+
+    from prices
+)
+
+select * from with_metrics
+  );
+
+[0m23:13:05.062254 [debug] [Thread-3 (]: SQL status: OK in 0.005 seconds
+[0m23:13:05.067252 [debug] [Thread-3 (]: Using duckdb connection "model.crypto_pipeline.int_daily_returns"
+[0m23:13:05.068253 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.int_daily_returns"} */
+alter view "crypto"."main"."int_daily_returns" rename to "int_daily_returns__dbt_backup"
+[0m23:13:05.070254 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m23:13:05.075531 [debug] [Thread-3 (]: Using duckdb connection "model.crypto_pipeline.int_daily_returns"
+[0m23:13:05.076529 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.int_daily_returns"} */
+alter view "crypto"."main"."int_daily_returns__dbt_tmp" rename to "int_daily_returns"
+[0m23:13:05.077918 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m23:13:05.081201 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: COMMIT
+[0m23:13:05.081201 [debug] [Thread-3 (]: Using duckdb connection "model.crypto_pipeline.int_daily_returns"
+[0m23:13:05.082205 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: COMMIT
+[0m23:13:05.084389 [debug] [Thread-3 (]: SQL status: OK in 0.002 seconds
+[0m23:13:05.090009 [debug] [Thread-3 (]: Using duckdb connection "model.crypto_pipeline.int_daily_returns"
+[0m23:13:05.091008 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.int_daily_returns"} */
+
+      drop view if exists "crypto"."main"."int_daily_returns__dbt_backup" cascade
+    
+[0m23:13:05.093451 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m23:13:05.095449 [debug] [Thread-3 (]: On model.crypto_pipeline.int_daily_returns: Close
+[0m23:13:05.096449 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '84f7c6ff-35cd-42ac-9211-121dff49c4d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025580A1B4D0>]}
+[0m23:13:05.097886 [info ] [Thread-3 (]: 2 of 3 OK created sql view model main.int_daily_returns ........................ [[32mOK[0m in 0.06s]
+[0m23:13:05.098898 [debug] [Thread-3 (]: Finished running node model.crypto_pipeline.int_daily_returns
+[0m23:13:05.100307 [debug] [Thread-2 (]: Began running node model.crypto_pipeline.mart_market_summary
+[0m23:13:05.101307 [info ] [Thread-2 (]: 3 of 3 START sql table model main.mart_market_summary .......................... [RUN]
+[0m23:13:05.102305 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.crypto_pipeline.mart_market_summary'
+[0m23:13:05.103303 [debug] [Thread-2 (]: Began compiling node model.crypto_pipeline.mart_market_summary
+[0m23:13:05.108321 [debug] [Thread-2 (]: Writing injected SQL for node "model.crypto_pipeline.mart_market_summary"
+[0m23:13:05.110309 [debug] [Thread-2 (]: Began executing node model.crypto_pipeline.mart_market_summary
+[0m23:13:05.138736 [debug] [Thread-2 (]: Writing runtime sql for node "model.crypto_pipeline.mart_market_summary"
+[0m23:13:05.140840 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m23:13:05.141842 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: BEGIN
+[0m23:13:05.142839 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m23:13:05.142839 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m23:13:05.144286 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m23:13:05.145285 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_market_summary"} */
+
+  
+    
+    
+
+    create  table
+      "crypto"."main"."mart_market_summary__dbt_tmp"
+  
+    as (
+      -- models/marts/mart_market_summary.sql
+--
+-- Purpose: Final market summary table for dashboards and reporting.
+-- One row per coin per ingestion run.
+--
+-- This is the table stakeholders query.
+-- Column names must be self-explanatory to a non-engineer.
+-- No raw field names. No ambiguous abbreviations.
+
+with daily_returns as (
+    select * from "crypto"."main"."int_daily_returns"
+),
+
+final as (
+    select
+        -- Identity
+        coin_id,
+        coin_symbol,
+        coin_name,
+
+        -- Pricing
+        price_usd,
+        high_24h_usd,
+        low_24h_usd,
+        price_change_pct_24h,
+        price_range_pct,
+
+        -- Market standing
+        market_cap_usd,
+        market_cap_rank,
+
+        -- Volume
+        volume_24h_usd,
+        volume_to_mcap_pct,
+        volume_activity,
+
+        -- Signals
+        market_sentiment,
+
+        -- Metadata
+        last_updated_at,
+        ingested_at,
+
+        -- Pipeline audit field
+        -- Lets you know exactly when dbt wrote this row
+        -- current_timestamp as dbt_updated_at
+        timezone('UTC', current_timestamp) as dbt_updated_at
+
+    from daily_returns
+)
+
+select * from final
+    );
+  
+  
+[0m23:13:05.166284 [debug] [Thread-2 (]: SQL status: OK in 0.019 seconds
+[0m23:13:05.173286 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m23:13:05.174284 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_market_summary"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'mart_market_summary'
+  
+[0m23:13:05.175460 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m23:13:05.178294 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m23:13:05.179324 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_market_summary"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'mart_market_summary'
+  
+[0m23:13:05.181338 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m23:13:05.187624 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m23:13:05.188622 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_market_summary"} */
+alter table "crypto"."main"."mart_market_summary" rename to "mart_market_summary__dbt_backup"
+[0m23:13:05.189759 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m23:13:05.195953 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m23:13:05.196954 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_market_summary"} */
+alter table "crypto"."main"."mart_market_summary__dbt_tmp" rename to "mart_market_summary"
+[0m23:13:05.197940 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m23:13:05.206279 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: COMMIT
+[0m23:13:05.207444 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m23:13:05.208478 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: COMMIT
+[0m23:13:05.210539 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m23:13:05.214845 [debug] [Thread-2 (]: Using duckdb connection "model.crypto_pipeline.mart_market_summary"
+[0m23:13:05.215847 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.mart_market_summary"} */
+
+      drop table if exists "crypto"."main"."mart_market_summary__dbt_backup" cascade
+    
+[0m23:13:05.217847 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m23:13:05.220570 [debug] [Thread-2 (]: On model.crypto_pipeline.mart_market_summary: Close
+[0m23:13:05.221579 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '84f7c6ff-35cd-42ac-9211-121dff49c4d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025581B91A50>]}
+[0m23:13:05.222584 [info ] [Thread-2 (]: 3 of 3 OK created sql table model main.mart_market_summary ..................... [[32mOK[0m in 0.12s]
+[0m23:13:05.223709 [debug] [Thread-2 (]: Finished running node model.crypto_pipeline.mart_market_summary
+[0m23:13:05.225708 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:13:05.226989 [debug] [MainThread]: On master: BEGIN
+[0m23:13:05.226989 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:13:05.228040 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m23:13:05.229040 [debug] [MainThread]: On master: COMMIT
+[0m23:13:05.229040 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:13:05.229040 [debug] [MainThread]: On master: COMMIT
+[0m23:13:05.230549 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m23:13:05.231758 [debug] [MainThread]: On master: Close
+[0m23:13:05.231758 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:13:05.232758 [debug] [MainThread]: Connection 'create_crypto_main' was properly closed.
+[0m23:13:05.233758 [debug] [MainThread]: Connection 'list_crypto_main' was properly closed.
+[0m23:13:05.233758 [debug] [MainThread]: Connection 'model.crypto_pipeline.stg_coin_prices' was properly closed.
+[0m23:13:05.235040 [debug] [MainThread]: Connection 'model.crypto_pipeline.int_daily_returns' was properly closed.
+[0m23:13:05.235040 [debug] [MainThread]: Connection 'model.crypto_pipeline.mart_market_summary' was properly closed.
+[0m23:13:05.236039 [info ] [MainThread]: 
+[0m23:13:05.237039 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 0.64 seconds (0.64s).
+[0m23:13:05.238385 [debug] [MainThread]: Command end result
+[0m23:13:05.281414 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\manifest.json
+[0m23:13:05.285410 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\semantic_manifest.json
+[0m23:13:05.295831 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\run_results.json
+[0m23:13:05.296831 [info ] [MainThread]: 
+[0m23:13:05.297832 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:13:05.298832 [info ] [MainThread]: 
+[0m23:13:05.299833 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m23:13:05.301253 [debug] [MainThread]: Command `dbt run` succeeded at 23:13:05.301253 after 2.14 seconds
+[0m23:13:05.302482 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000255F595A190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000255EF4F5E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000255EF5AFBD0>]}
+[0m23:13:05.302482 [debug] [MainThread]: Flushing usage events
+[0m23:13:06.947430 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:13:10.266931 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289ED07DA10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289ED07CBD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289ED07CB90>]}
+
+
+============================== 23:13:10.273929 | bb31922d-c603-416d-ad90-811d15523d19 ==============================
+[0m23:13:10.273929 [info ] [MainThread]: Running with dbt=1.11.7
+[0m23:13:10.275930 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Abideen Bello\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt test', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Abideen Bello\\dbt_projects\\crypto_pipeline\\dbt_project\\logs'}
+[0m23:13:10.593148 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'bb31922d-c603-416d-ad90-811d15523d19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289ED084C10>]}
+[0m23:13:10.671016 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'bb31922d-c603-416d-ad90-811d15523d19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289E97C5490>]}
+[0m23:13:10.674017 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m23:13:10.980050 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m23:13:11.140160 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:13:11.141161 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m23:13:11.142159 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:13:11.197147 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'bb31922d-c603-416d-ad90-811d15523d19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289EE103310>]}
+[0m23:13:11.333524 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\manifest.json
+[0m23:13:11.337524 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\semantic_manifest.json
+[0m23:13:11.438466 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'bb31922d-c603-416d-ad90-811d15523d19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002898011AFD0>]}
+[0m23:13:11.439475 [info ] [MainThread]: Found 3 models, 7 data tests, 1 source, 474 macros
+[0m23:13:11.440473 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bb31922d-c603-416d-ad90-811d15523d19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028980663890>]}
+[0m23:13:11.442872 [info ] [MainThread]: 
+[0m23:13:11.443884 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m23:13:11.444870 [info ] [MainThread]: 
+[0m23:13:11.445868 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m23:13:11.453068 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_crypto_main'
+[0m23:13:11.542066 [debug] [ThreadPool]: Using duckdb connection "list_crypto_main"
+[0m23:13:11.542066 [debug] [ThreadPool]: On list_crypto_main: BEGIN
+[0m23:13:11.543066 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:13:11.567067 [debug] [ThreadPool]: SQL status: OK in 0.024 seconds
+[0m23:13:11.568817 [debug] [ThreadPool]: Using duckdb connection "list_crypto_main"
+[0m23:13:11.568817 [debug] [ThreadPool]: On list_crypto_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "connection_name": "list_crypto_main"} */
+select
+      'crypto' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'crypto'
+  
+[0m23:13:11.577088 [debug] [ThreadPool]: SQL status: OK in 0.007 seconds
+[0m23:13:11.579090 [debug] [ThreadPool]: On list_crypto_main: ROLLBACK
+[0m23:13:11.581084 [debug] [ThreadPool]: Failed to rollback 'list_crypto_main'
+[0m23:13:11.582085 [debug] [ThreadPool]: On list_crypto_main: Close
+[0m23:13:11.584082 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bb31922d-c603-416d-ad90-811d15523d19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289806C1A50>]}
+[0m23:13:11.586083 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:13:11.587080 [debug] [MainThread]: On master: BEGIN
+[0m23:13:11.588082 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:13:11.589082 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m23:13:11.589082 [debug] [MainThread]: On master: COMMIT
+[0m23:13:11.590338 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:13:11.590338 [debug] [MainThread]: On master: COMMIT
+[0m23:13:11.591337 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m23:13:11.592335 [debug] [MainThread]: On master: Close
+[0m23:13:11.597793 [debug] [Thread-1 (]: Began running node test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde
+[0m23:13:11.598791 [debug] [Thread-2 (]: Began running node test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2
+[0m23:13:11.599791 [debug] [Thread-3 (]: Began running node test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557
+[0m23:13:11.599791 [info ] [Thread-1 (]: 1 of 7 START test not_null_stg_coin_prices_coin_id ............................. [RUN]
+[0m23:13:11.601133 [debug] [Thread-4 (]: Began running node test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910
+[0m23:13:11.602135 [info ] [Thread-2 (]: 2 of 7 START test not_null_stg_coin_prices_coin_symbol ......................... [RUN]
+[0m23:13:11.603133 [info ] [Thread-3 (]: 3 of 7 START test not_null_stg_coin_prices_ingested_at ......................... [RUN]
+[0m23:13:11.604134 [debug] [Thread-1 (]: Acquiring new duckdb connection 'test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde'
+[0m23:13:11.604134 [info ] [Thread-4 (]: 4 of 7 START test not_null_stg_coin_prices_market_cap_rank ..................... [RUN]
+[0m23:13:11.605135 [debug] [Thread-2 (]: Acquiring new duckdb connection 'test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2'
+[0m23:13:11.606244 [debug] [Thread-3 (]: Acquiring new duckdb connection 'test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557'
+[0m23:13:11.607258 [debug] [Thread-1 (]: Began compiling node test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde
+[0m23:13:11.608256 [debug] [Thread-4 (]: Acquiring new duckdb connection 'test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910'
+[0m23:13:11.608256 [debug] [Thread-2 (]: Began compiling node test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2
+[0m23:13:11.609262 [debug] [Thread-3 (]: Began compiling node test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557
+[0m23:13:11.630573 [debug] [Thread-1 (]: Writing injected SQL for node "test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde"
+[0m23:13:11.631572 [debug] [Thread-4 (]: Began compiling node test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910
+[0m23:13:11.642570 [debug] [Thread-2 (]: Writing injected SQL for node "test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2"
+[0m23:13:11.649570 [debug] [Thread-3 (]: Writing injected SQL for node "test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557"
+[0m23:13:11.656577 [debug] [Thread-4 (]: Writing injected SQL for node "test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910"
+[0m23:13:11.658570 [debug] [Thread-1 (]: Began executing node test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde
+[0m23:13:11.659629 [debug] [Thread-2 (]: Began executing node test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2
+[0m23:13:11.685992 [debug] [Thread-1 (]: Writing runtime sql for node "test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde"
+[0m23:13:11.686993 [debug] [Thread-3 (]: Began executing node test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557
+[0m23:13:11.691992 [debug] [Thread-2 (]: Writing runtime sql for node "test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2"
+[0m23:13:11.691992 [debug] [Thread-4 (]: Began executing node test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910
+[0m23:13:11.695992 [debug] [Thread-3 (]: Writing runtime sql for node "test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557"
+[0m23:13:11.697992 [debug] [Thread-1 (]: Using duckdb connection "test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde"
+[0m23:13:11.702993 [debug] [Thread-4 (]: Writing runtime sql for node "test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910"
+[0m23:13:11.704996 [debug] [Thread-2 (]: Using duckdb connection "test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2"
+[0m23:13:11.705994 [debug] [Thread-1 (]: On test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde: BEGIN
+[0m23:13:11.707404 [debug] [Thread-3 (]: Using duckdb connection "test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557"
+[0m23:13:11.708404 [debug] [Thread-2 (]: On test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2: BEGIN
+[0m23:13:11.709402 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:13:11.710400 [debug] [Thread-4 (]: Using duckdb connection "test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910"
+[0m23:13:11.711401 [debug] [Thread-3 (]: On test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557: BEGIN
+[0m23:13:11.712407 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m23:13:11.713663 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m23:13:11.714675 [debug] [Thread-4 (]: On test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910: BEGIN
+[0m23:13:11.714675 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m23:13:11.717062 [debug] [Thread-1 (]: Using duckdb connection "test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde"
+[0m23:13:11.717062 [debug] [Thread-2 (]: SQL status: OK in 0.005 seconds
+[0m23:13:11.718061 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m23:13:11.720062 [debug] [Thread-1 (]: On test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select coin_id
+from "crypto"."main"."stg_coin_prices"
+where coin_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:13:11.720062 [debug] [Thread-3 (]: SQL status: OK in 0.005 seconds
+[0m23:13:11.721063 [debug] [Thread-2 (]: Using duckdb connection "test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2"
+[0m23:13:11.723062 [debug] [Thread-4 (]: SQL status: OK in 0.004 seconds
+[0m23:13:11.723062 [debug] [Thread-3 (]: Using duckdb connection "test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557"
+[0m23:13:11.724063 [debug] [Thread-2 (]: On test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select coin_symbol
+from "crypto"."main"."stg_coin_prices"
+where coin_symbol is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:13:11.725062 [debug] [Thread-4 (]: Using duckdb connection "test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910"
+[0m23:13:11.726062 [debug] [Thread-3 (]: On test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select ingested_at
+from "crypto"."main"."stg_coin_prices"
+where ingested_at is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:13:11.727062 [debug] [Thread-4 (]: On test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select market_cap_rank
+from "crypto"."main"."stg_coin_prices"
+where market_cap_rank is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:13:11.729063 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m23:13:11.730062 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m23:13:11.731061 [debug] [Thread-4 (]: SQL status: OK in 0.003 seconds
+[0m23:13:11.737241 [debug] [Thread-2 (]: On test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2: ROLLBACK
+[0m23:13:11.738249 [debug] [Thread-3 (]: SQL status: OK in 0.010 seconds
+[0m23:13:11.740245 [debug] [Thread-1 (]: On test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde: ROLLBACK
+[0m23:13:11.742260 [debug] [Thread-4 (]: On test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910: ROLLBACK
+[0m23:13:11.743261 [debug] [Thread-2 (]: Failed to rollback 'test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2'
+[0m23:13:11.745683 [debug] [Thread-3 (]: On test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557: ROLLBACK
+[0m23:13:11.746698 [debug] [Thread-1 (]: Failed to rollback 'test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde'
+[0m23:13:11.747763 [debug] [Thread-4 (]: Failed to rollback 'test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910'
+[0m23:13:11.747763 [debug] [Thread-2 (]: On test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2: Close
+[0m23:13:11.749825 [debug] [Thread-3 (]: Failed to rollback 'test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557'
+[0m23:13:11.750898 [debug] [Thread-1 (]: On test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde: Close
+[0m23:13:11.750898 [debug] [Thread-4 (]: On test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910: Close
+[0m23:13:11.752120 [info ] [Thread-2 (]: 2 of 7 PASS not_null_stg_coin_prices_coin_symbol ............................... [[32mPASS[0m in 0.15s]
+[0m23:13:11.753138 [debug] [Thread-3 (]: On test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557: Close
+[0m23:13:11.754127 [info ] [Thread-1 (]: 1 of 7 PASS not_null_stg_coin_prices_coin_id ................................... [[32mPASS[0m in 0.15s]
+[0m23:13:11.755400 [info ] [Thread-4 (]: 4 of 7 PASS not_null_stg_coin_prices_market_cap_rank ........................... [[32mPASS[0m in 0.15s]
+[0m23:13:11.756834 [debug] [Thread-2 (]: Finished running node test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2
+[0m23:13:11.757833 [info ] [Thread-3 (]: 3 of 7 PASS not_null_stg_coin_prices_ingested_at ............................... [[32mPASS[0m in 0.15s]
+[0m23:13:11.759170 [debug] [Thread-1 (]: Finished running node test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde
+[0m23:13:11.760170 [debug] [Thread-4 (]: Finished running node test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910
+[0m23:13:11.761197 [debug] [Thread-2 (]: Began running node test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e
+[0m23:13:11.762169 [debug] [Thread-3 (]: Finished running node test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557
+[0m23:13:11.762169 [debug] [Thread-1 (]: Began running node test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e
+[0m23:13:11.763645 [debug] [Thread-4 (]: Began running node test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12
+[0m23:13:11.764667 [info ] [Thread-2 (]: 5 of 7 START test not_null_stg_coin_prices_price_usd ........................... [RUN]
+[0m23:13:11.765665 [info ] [Thread-1 (]: 6 of 7 START test not_null_stg_coin_prices_volume_24h_usd ...................... [RUN]
+[0m23:13:11.766668 [info ] [Thread-4 (]: 7 of 7 START test unique_stg_coin_prices_coin_id ............................... [RUN]
+[0m23:13:11.767665 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.crypto_pipeline.not_null_stg_coin_prices_coin_symbol.8e1302c8b2, now test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e)
+[0m23:13:11.768792 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.crypto_pipeline.not_null_stg_coin_prices_coin_id.4a0cd50fde, now test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e)
+[0m23:13:11.769790 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.crypto_pipeline.not_null_stg_coin_prices_market_cap_rank.d72032f910, now test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12)
+[0m23:13:11.770793 [debug] [Thread-2 (]: Began compiling node test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e
+[0m23:13:11.771791 [debug] [Thread-1 (]: Began compiling node test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e
+[0m23:13:11.772789 [debug] [Thread-4 (]: Began compiling node test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12
+[0m23:13:11.783788 [debug] [Thread-2 (]: Writing injected SQL for node "test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e"
+[0m23:13:11.792788 [debug] [Thread-1 (]: Writing injected SQL for node "test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e"
+[0m23:13:11.804790 [debug] [Thread-4 (]: Writing injected SQL for node "test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12"
+[0m23:13:11.806789 [debug] [Thread-2 (]: Began executing node test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e
+[0m23:13:11.814789 [debug] [Thread-2 (]: Writing runtime sql for node "test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e"
+[0m23:13:11.816994 [debug] [Thread-1 (]: Began executing node test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e
+[0m23:13:11.817993 [debug] [Thread-4 (]: Began executing node test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12
+[0m23:13:11.823013 [debug] [Thread-1 (]: Writing runtime sql for node "test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e"
+[0m23:13:11.827009 [debug] [Thread-4 (]: Writing runtime sql for node "test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12"
+[0m23:13:11.828010 [debug] [Thread-2 (]: Using duckdb connection "test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e"
+[0m23:13:11.830320 [debug] [Thread-1 (]: Using duckdb connection "test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e"
+[0m23:13:11.830320 [debug] [Thread-2 (]: On test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e: BEGIN
+[0m23:13:11.831339 [debug] [Thread-4 (]: Using duckdb connection "test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12"
+[0m23:13:11.832340 [debug] [Thread-1 (]: On test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e: BEGIN
+[0m23:13:11.833339 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m23:13:11.834339 [debug] [Thread-4 (]: On test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12: BEGIN
+[0m23:13:11.835390 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:13:11.836905 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m23:13:11.836905 [debug] [Thread-2 (]: SQL status: OK in 0.004 seconds
+[0m23:13:11.838904 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m23:13:11.840073 [debug] [Thread-4 (]: SQL status: OK in 0.003 seconds
+[0m23:13:11.840073 [debug] [Thread-2 (]: Using duckdb connection "test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e"
+[0m23:13:11.841074 [debug] [Thread-1 (]: Using duckdb connection "test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e"
+[0m23:13:11.842456 [debug] [Thread-4 (]: Using duckdb connection "test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12"
+[0m23:13:11.843455 [debug] [Thread-2 (]: On test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select price_usd
+from "crypto"."main"."stg_coin_prices"
+where price_usd is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:13:11.844459 [debug] [Thread-1 (]: On test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select volume_24h_usd
+from "crypto"."main"."stg_coin_prices"
+where volume_24h_usd is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:13:11.844459 [debug] [Thread-4 (]: On test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    coin_id as unique_field,
+    count(*) as n_records
+
+from "crypto"."main"."stg_coin_prices"
+where coin_id is not null
+group by coin_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:13:11.848902 [debug] [Thread-2 (]: SQL status: OK in 0.003 seconds
+[0m23:13:11.849904 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m23:13:11.852902 [debug] [Thread-2 (]: On test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e: ROLLBACK
+[0m23:13:11.855903 [debug] [Thread-1 (]: On test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e: ROLLBACK
+[0m23:13:11.856907 [debug] [Thread-4 (]: SQL status: OK in 0.010 seconds
+[0m23:13:11.857942 [debug] [Thread-2 (]: Failed to rollback 'test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e'
+[0m23:13:11.859944 [debug] [Thread-1 (]: Failed to rollback 'test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e'
+[0m23:13:11.862943 [debug] [Thread-4 (]: On test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12: ROLLBACK
+[0m23:13:11.863942 [debug] [Thread-2 (]: On test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e: Close
+[0m23:13:11.864941 [debug] [Thread-1 (]: On test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e: Close
+[0m23:13:11.865941 [debug] [Thread-4 (]: Failed to rollback 'test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12'
+[0m23:13:11.867946 [info ] [Thread-2 (]: 5 of 7 PASS not_null_stg_coin_prices_price_usd ................................. [[32mPASS[0m in 0.10s]
+[0m23:13:11.868943 [info ] [Thread-1 (]: 6 of 7 PASS not_null_stg_coin_prices_volume_24h_usd ............................ [[32mPASS[0m in 0.10s]
+[0m23:13:11.869943 [debug] [Thread-4 (]: On test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12: Close
+[0m23:13:11.870943 [debug] [Thread-2 (]: Finished running node test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e
+[0m23:13:11.871944 [debug] [Thread-1 (]: Finished running node test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e
+[0m23:13:11.873072 [info ] [Thread-4 (]: 7 of 7 PASS unique_stg_coin_prices_coin_id ..................................... [[32mPASS[0m in 0.10s]
+[0m23:13:11.875093 [debug] [Thread-4 (]: Finished running node test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12
+[0m23:13:11.878093 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:13:11.879093 [debug] [MainThread]: On master: BEGIN
+[0m23:13:11.879093 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:13:11.880294 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m23:13:11.881411 [debug] [MainThread]: On master: COMMIT
+[0m23:13:11.882415 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:13:11.883412 [debug] [MainThread]: On master: COMMIT
+[0m23:13:11.884414 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m23:13:11.885412 [debug] [MainThread]: On master: Close
+[0m23:13:11.886412 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:13:11.887410 [debug] [MainThread]: Connection 'list_crypto_main' was properly closed.
+[0m23:13:11.888410 [debug] [MainThread]: Connection 'test.crypto_pipeline.not_null_stg_coin_prices_volume_24h_usd.ba54514e9e' was properly closed.
+[0m23:13:11.889411 [debug] [MainThread]: Connection 'test.crypto_pipeline.not_null_stg_coin_prices_price_usd.64cc2cc94e' was properly closed.
+[0m23:13:11.890413 [debug] [MainThread]: Connection 'test.crypto_pipeline.not_null_stg_coin_prices_ingested_at.82ee03c557' was properly closed.
+[0m23:13:11.890413 [debug] [MainThread]: Connection 'test.crypto_pipeline.unique_stg_coin_prices_coin_id.f0b5aafa12' was properly closed.
+[0m23:13:11.891411 [info ] [MainThread]: 
+[0m23:13:11.892411 [info ] [MainThread]: Finished running 7 data tests in 0 hours 0 minutes and 0.45 seconds (0.45s).
+[0m23:13:11.896412 [debug] [MainThread]: Command end result
+[0m23:13:11.947189 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\manifest.json
+[0m23:13:11.951187 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\semantic_manifest.json
+[0m23:13:11.966188 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\target\run_results.json
+[0m23:13:11.968190 [info ] [MainThread]: 
+[0m23:13:11.970188 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:13:11.971185 [info ] [MainThread]: 
+[0m23:13:11.972185 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=7
+[0m23:13:11.975185 [debug] [MainThread]: Command `dbt test` succeeded at 23:13:11.974185 after 1.87 seconds
+[0m23:13:11.976185 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289E7C35E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289EE0A7AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289EE0A5290>]}
+[0m23:13:11.977188 [debug] [MainThread]: Flushing usage events
+[0m23:13:13.149090 [debug] [MainThread]: An error was encountered while trying to flush usage events
