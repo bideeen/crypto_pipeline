@@ -1,0 +1,8 @@
+crypto_pipeline:
+  outputs:
+    dev:
+      type: duckdb
+      path: "{{env_var('DBT_DEV_PATH', '../data/crypto.duckdb') }}"
+      threads: 4
+
+  target: dev
