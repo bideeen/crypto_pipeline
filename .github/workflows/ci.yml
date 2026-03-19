@@ -31,9 +31,9 @@ jobs:
         run: python ingestion/load_raw.py
 
       - name: Run dbt transformations
-        run: dbt run
+        run: dbt run --profiles-dir . --target dev
         working-directory: dbt_project
 
       - name: Run dbt tests
-        run: dbt test
+        run: dbt test --profiles-dir . --target dev
         working-directory: dbt_project
