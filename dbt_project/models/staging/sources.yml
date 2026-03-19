@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    description: "Raw data from CoinGecko API"
+    tables:
+      - name: coin_prices
+        description: >
+          Raw coin market data. One row per coin per ingestion run.
+          Do not query this table directly. use statging models instead.
+        columns:
+          - name: id
+            description: CoinGecko's unique coin identifier 
+          - name: current_price
+            description: Price in USD at the time of ingestion
+          - name: market_cap_rank
+            description: Global rank by market cap.
+
