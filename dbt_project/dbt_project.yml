@@ -1,6 +1,6 @@
 name: crypto_pipeline
 version: "1.0.0"
-config-version: 
+config-version: 2
 
 profile: crypto_pipeline
 

@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: stg_coin_prices
+    description: >
+      Cleaned and standardized coin prices from CoinGecko.
+      One row per coin per ingestion run.
+      This is the only model that references raw column names.
+
+    columns:
+      - name: coin_id
+        description: Unique CoinGecko identifier e.g. "bitcoin"
+        data_tests:
+          - not_null
+          - unique
+
+      - name: coin_symbol
+        description: Ticker symbol e.g. "btc"
+        data_tests:
+          - not_null
+
+      - name: price_usd
+        description: Current price in USD
+        data_tests:
+          - not_null
+
+      - name: market_cap_rank
+        description: Global rank by market cap, 1 = largest
+        data_tests:
+          - not_null
+
+      - name: volume_24h_usd
+        description: 24 hour trading volume in USD
+        data_tests:
+          - not_null
+
+      - name: ingested_at
+        description: Timestamp when this record was pulled from the API
+        data_tests:
+          - not_null
