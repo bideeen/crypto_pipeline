@@ -4,6 +4,7 @@ __pycache__/
 *.pyc
 *.pyo
 .env
+logs/*.log
 
 # Data — never commit raw data to git
 data/
