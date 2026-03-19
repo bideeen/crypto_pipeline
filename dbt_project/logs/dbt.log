@@ -1,0 +1,531 @@
+[0m18:16:00.371091 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A262FCDC50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A262D68E90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A262FCD3D0>]}
+
+
+============================== 18:16:00.377778 | aeb465b0-6904-4c3d-9907-cc977eff138b ==============================
+[0m18:16:00.377778 [info ] [MainThread]: Running with dbt=1.11.7
+[0m18:16:00.378789 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Abideen Bello\\.dbt', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt init crypto_pipeline', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m18:16:00.397848 [debug] [MainThread]: Starter project path: C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\crypto\Lib\site-packages\dbt\include\starter_project
+[0m18:16:00.422691 [info ] [MainThread]: 
+Your new dbt project "crypto_pipeline" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:16:00.423703 [info ] [MainThread]: Setting up your profile.
+[0m18:16:05.485083 [debug] [MainThread]: Command `dbt init` succeeded at 18:16:05.485083 after 5.26 seconds
+[0m18:16:05.485083 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A25DB65C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A25DBA7B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A25DBA6E50>]}
+[0m18:16:05.486334 [debug] [MainThread]: Flushing usage events
+[0m18:16:06.558640 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:51:20.561851 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F129D01E50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F129D01350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F129D01950>]}
+
+
+============================== 19:51:20.567899 | 00627eb4-5974-4deb-adfe-297292f4157e ==============================
+[0m19:51:20.567899 [info ] [MainThread]: Running with dbt=1.11.7
+[0m19:51:20.569818 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Abideen Bello\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Abideen Bello\\dbt_projects\\crypto_pipeline\\dbt_project\\logs'}
+[0m19:51:20.599600 [info ] [MainThread]: dbt version: 1.11.7
+[0m19:51:20.600599 [info ] [MainThread]: python version: 3.11.9
+[0m19:51:20.601600 [info ] [MainThread]: python path: C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\crypto\Scripts\python.exe
+[0m19:51:20.602601 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m19:51:20.898337 [info ] [MainThread]: Using profiles dir at C:\Users\Abideen Bello\.dbt
+[0m19:51:20.899337 [info ] [MainThread]: Using profiles.yml file at C:\Users\Abideen Bello\.dbt\profiles.yml
+[0m19:51:20.900337 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\dbt_project.yml
+[0m19:51:20.904336 [info ] [MainThread]: adapter type: duckdb
+[0m19:51:20.904336 [info ] [MainThread]: adapter version: 1.10.1
+[0m19:51:20.991936 [info ] [MainThread]: Configuration:
+[0m19:51:20.992921 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:51:20.993920 [info ] [MainThread]:   dbt_project.yml file [[31mERROR invalid[0m]
+[0m19:51:20.994919 [info ] [MainThread]: Required dependencies:
+[0m19:51:20.996008 [debug] [MainThread]: Executing "git --help"
+[0m19:51:21.053811 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:51:21.054811 [debug] [MainThread]: STDERR: "b''"
+[0m19:51:21.055811 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:51:21.056811 [info ] [MainThread]: Connection:
+[0m19:51:21.056811 [info ] [MainThread]:   database: crypto
+[0m19:51:21.057813 [info ] [MainThread]:   schema: main
+[0m19:51:21.058811 [info ] [MainThread]:   path: {env_var('DBT_DEV_PATH', '../data/crypto.duckdb')}
+[0m19:51:21.062813 [info ] [MainThread]:   config_options: None
+[0m19:51:21.063814 [info ] [MainThread]:   extensions: None
+[0m19:51:21.064814 [info ] [MainThread]:   settings: {}
+[0m19:51:21.065815 [info ] [MainThread]:   external_root: .
+[0m19:51:21.066814 [info ] [MainThread]:   use_credential_provider: None
+[0m19:51:21.066814 [info ] [MainThread]:   attach: None
+[0m19:51:21.067812 [info ] [MainThread]:   filesystems: None
+[0m19:51:21.068812 [info ] [MainThread]:   remote: None
+[0m19:51:21.069813 [info ] [MainThread]:   plugins: None
+[0m19:51:21.070813 [info ] [MainThread]:   disable_transactions: False
+[0m19:51:21.071814 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m19:51:21.465545 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m19:51:21.534129 [debug] [MainThread]: Using duckdb connection "debug"
+[0m19:51:21.534129 [debug] [MainThread]: On debug: select 1 as id
+[0m19:51:21.535130 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:51:21.566286 [debug] [MainThread]: DuckDB adapter: duckdb error: IO Error: Cannot open file "\\?\C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\{env_var('DBT_DEV_PATH', '..\data\crypto.duckdb')}": The system cannot find the path specified.
+
+[0m19:51:21.567287 [debug] [MainThread]: DuckDB adapter: Error running SQL: select 1 as id
+[0m19:51:21.567287 [debug] [MainThread]: DuckDB adapter: Rolling back transaction.
+[0m19:51:21.568287 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:51:21.586311 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m19:51:21.587436 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m19:51:21.588628 [info ] [MainThread]: Project loading failed for the following reason:
+Runtime Error
+  at path []: Additional properties are not allowed ('clean-target', 'macro-path' were unexpected)
+
+Error encountered in C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\dbt_project.yml
+
+
+[0m19:51:21.589653 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >IO Error: Cannot open file "\\?\C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\{env_var('DBT_DEV_PATH', '..\data\crypto.duckdb')}": The system cannot find the path specified.
+
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m19:51:21.590731 [debug] [MainThread]: Command `dbt debug` failed at 19:51:21.590731 after 1.17 seconds
+[0m19:51:21.591836 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:51:21.592749 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F1001B7550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F12AE18950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F126700E90>]}
+[0m19:51:21.593749 [debug] [MainThread]: Flushing usage events
+[0m19:51:22.990404 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:53:15.355773 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001332E1352D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001332E137650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001332E137750>]}
+
+
+============================== 19:53:15.363294 | b9fe34de-89b3-4581-9235-23b1988e7c92 ==============================
+[0m19:53:15.363294 [info ] [MainThread]: Running with dbt=1.11.7
+[0m19:53:15.364791 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Abideen Bello\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Abideen Bello\\dbt_projects\\crypto_pipeline\\dbt_project\\logs'}
+[0m19:53:15.385000 [info ] [MainThread]: dbt version: 1.11.7
+[0m19:53:15.386001 [info ] [MainThread]: python version: 3.11.9
+[0m19:53:15.387999 [info ] [MainThread]: python path: C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\crypto\Scripts\python.exe
+[0m19:53:15.387999 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m19:53:15.555807 [info ] [MainThread]: Using profiles dir at C:\Users\Abideen Bello\.dbt
+[0m19:53:15.556803 [info ] [MainThread]: Using profiles.yml file at C:\Users\Abideen Bello\.dbt\profiles.yml
+[0m19:53:15.558015 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\dbt_project.yml
+[0m19:53:15.562201 [info ] [MainThread]: adapter type: duckdb
+[0m19:53:15.563203 [info ] [MainThread]: adapter version: 1.10.1
+[0m19:53:15.669101 [info ] [MainThread]: Configuration:
+[0m19:53:15.670085 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:53:15.671083 [info ] [MainThread]:   dbt_project.yml file [[31mERROR invalid[0m]
+[0m19:53:15.672188 [info ] [MainThread]: Required dependencies:
+[0m19:53:15.673501 [debug] [MainThread]: Executing "git --help"
+[0m19:53:15.735609 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:53:15.737722 [debug] [MainThread]: STDERR: "b''"
+[0m19:53:15.738722 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:53:15.739723 [info ] [MainThread]: Connection:
+[0m19:53:15.740920 [info ] [MainThread]:   database: crypto
+[0m19:53:15.742385 [info ] [MainThread]:   schema: main
+[0m19:53:15.743388 [info ] [MainThread]:   path: {env_var('DBT_DEV_PATH', '../data/crypto.duckdb')}
+[0m19:53:15.746394 [info ] [MainThread]:   config_options: None
+[0m19:53:15.747385 [info ] [MainThread]:   extensions: None
+[0m19:53:15.748385 [info ] [MainThread]:   settings: {}
+[0m19:53:15.749384 [info ] [MainThread]:   external_root: .
+[0m19:53:15.749384 [info ] [MainThread]:   use_credential_provider: None
+[0m19:53:15.751384 [info ] [MainThread]:   attach: None
+[0m19:53:15.751384 [info ] [MainThread]:   filesystems: None
+[0m19:53:15.752384 [info ] [MainThread]:   remote: None
+[0m19:53:15.753384 [info ] [MainThread]:   plugins: None
+[0m19:53:15.754585 [info ] [MainThread]:   disable_transactions: False
+[0m19:53:15.755743 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m19:53:16.101401 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m19:53:16.171125 [debug] [MainThread]: Using duckdb connection "debug"
+[0m19:53:16.171125 [debug] [MainThread]: On debug: select 1 as id
+[0m19:53:16.172155 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:53:16.199144 [debug] [MainThread]: DuckDB adapter: duckdb error: IO Error: Cannot open file "\\?\C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\{env_var('DBT_DEV_PATH', '..\data\crypto.duckdb')}": The system cannot find the path specified.
+
+[0m19:53:16.201145 [debug] [MainThread]: DuckDB adapter: Error running SQL: select 1 as id
+[0m19:53:16.201145 [debug] [MainThread]: DuckDB adapter: Rolling back transaction.
+[0m19:53:16.202175 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:53:16.239254 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m19:53:16.241258 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m19:53:16.242261 [info ] [MainThread]: Project loading failed for the following reason:
+Runtime Error
+  at path []: Additional properties are not allowed ('clean-target', 'macro-path' were unexpected)
+
+Error encountered in C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\dbt_project.yml
+
+
+[0m19:53:16.243257 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >IO Error: Cannot open file "\\?\C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\{env_var('DBT_DEV_PATH', '..\data\crypto.duckdb')}": The system cannot find the path specified.
+
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m19:53:16.245414 [debug] [MainThread]: Command `dbt debug` failed at 19:53:16.245414 after 1.06 seconds
+[0m19:53:16.246427 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:53:16.247428 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001332D0F25D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013327E1FBD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013327E1FB90>]}
+[0m19:53:16.248460 [debug] [MainThread]: Flushing usage events
+[0m19:53:17.800824 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:54:22.135890 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023281912050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023281911A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023281911D90>]}
+
+
+============================== 19:54:22.141889 | 3c32865e-fe08-445b-9d09-a2b2b4b03ad2 ==============================
+[0m19:54:22.141889 [info ] [MainThread]: Running with dbt=1.11.7
+[0m19:54:22.144890 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Abideen Bello\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Abideen Bello\\dbt_projects\\crypto_pipeline\\dbt_project\\logs'}
+[0m19:54:22.167623 [info ] [MainThread]: dbt version: 1.11.7
+[0m19:54:22.170089 [info ] [MainThread]: python version: 3.11.9
+[0m19:54:22.171240 [info ] [MainThread]: python path: C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\crypto\Scripts\python.exe
+[0m19:54:22.172241 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m19:54:22.363661 [info ] [MainThread]: Using profiles dir at C:\Users\Abideen Bello\.dbt
+[0m19:54:22.365659 [info ] [MainThread]: Using profiles.yml file at C:\Users\Abideen Bello\.dbt\profiles.yml
+[0m19:54:22.366660 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\dbt_project.yml
+[0m19:54:22.371156 [info ] [MainThread]: adapter type: duckdb
+[0m19:54:22.371156 [info ] [MainThread]: adapter version: 1.10.1
+[0m19:54:22.529691 [info ] [MainThread]: Configuration:
+[0m19:54:22.530692 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:54:22.531691 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m19:54:22.532690 [info ] [MainThread]: Required dependencies:
+[0m19:54:22.533691 [debug] [MainThread]: Executing "git --help"
+[0m19:54:22.612458 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:54:22.613457 [debug] [MainThread]: STDERR: "b''"
+[0m19:54:22.615458 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:54:22.616457 [info ] [MainThread]: Connection:
+[0m19:54:22.617456 [info ] [MainThread]:   database: crypto
+[0m19:54:22.618457 [info ] [MainThread]:   schema: main
+[0m19:54:22.619857 [info ] [MainThread]:   path: {env_var('DBT_DEV_PATH', '../data/crypto.duckdb')}
+[0m19:54:22.620966 [info ] [MainThread]:   config_options: None
+[0m19:54:22.621969 [info ] [MainThread]:   extensions: None
+[0m19:54:22.624964 [info ] [MainThread]:   settings: {}
+[0m19:54:22.626967 [info ] [MainThread]:   external_root: .
+[0m19:54:22.629967 [info ] [MainThread]:   use_credential_provider: None
+[0m19:54:22.630967 [info ] [MainThread]:   attach: None
+[0m19:54:22.631966 [info ] [MainThread]:   filesystems: None
+[0m19:54:22.632969 [info ] [MainThread]:   remote: None
+[0m19:54:22.633970 [info ] [MainThread]:   plugins: None
+[0m19:54:22.635967 [info ] [MainThread]:   disable_transactions: False
+[0m19:54:22.636967 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m19:54:23.182208 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m19:54:23.289688 [debug] [MainThread]: Using duckdb connection "debug"
+[0m19:54:23.289688 [debug] [MainThread]: On debug: select 1 as id
+[0m19:54:23.291182 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:54:23.324641 [debug] [MainThread]: DuckDB adapter: duckdb error: IO Error: Cannot open file "\\?\C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\{env_var('DBT_DEV_PATH', '..\data\crypto.duckdb')}": The system cannot find the path specified.
+
+[0m19:54:23.326010 [debug] [MainThread]: DuckDB adapter: Error running SQL: select 1 as id
+[0m19:54:23.328011 [debug] [MainThread]: DuckDB adapter: Rolling back transaction.
+[0m19:54:23.329017 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:54:23.352152 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m19:54:23.353161 [info ] [MainThread]: [31m1 check failed:[0m
+[0m19:54:23.354154 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >IO Error: Cannot open file "\\?\C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\{env_var('DBT_DEV_PATH', '..\data\crypto.duckdb')}": The system cannot find the path specified.
+
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m19:54:23.355190 [debug] [MainThread]: Command `dbt debug` failed at 19:54:23.355190 after 1.41 seconds
+[0m19:54:23.356578 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:54:23.356578 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023282B694D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002328291A150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000232FC52FBD0>]}
+[0m19:54:23.357943 [debug] [MainThread]: Flushing usage events
+[0m19:54:24.768359 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:56:46.473754 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015C9CBB3410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015C9CBC5490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015C9CBC5E50>]}
+
+
+============================== 19:56:46.478323 | b79dd54f-d26c-410f-a060-21ceea4ff32e ==============================
+[0m19:56:46.478323 [info ] [MainThread]: Running with dbt=1.11.7
+[0m19:56:46.480659 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Abideen Bello\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Abideen Bello\\dbt_projects\\crypto_pipeline\\dbt_project\\logs'}
+[0m19:56:46.497073 [info ] [MainThread]: dbt version: 1.11.7
+[0m19:56:46.498072 [info ] [MainThread]: python version: 3.11.9
+[0m19:56:46.499072 [info ] [MainThread]: python path: C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\crypto\Scripts\python.exe
+[0m19:56:46.500072 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m19:56:46.640396 [info ] [MainThread]: Using profiles dir at C:\Users\Abideen Bello\.dbt
+[0m19:56:46.641314 [info ] [MainThread]: Using profiles.yml file at C:\Users\Abideen Bello\.dbt\profiles.yml
+[0m19:56:46.642307 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\dbt_project.yml
+[0m19:56:46.645875 [info ] [MainThread]: adapter type: duckdb
+[0m19:56:46.646786 [info ] [MainThread]: adapter version: 1.10.1
+[0m19:56:46.768809 [info ] [MainThread]: Configuration:
+[0m19:56:46.769809 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:56:46.770810 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m19:56:46.770810 [info ] [MainThread]: Required dependencies:
+[0m19:56:46.771809 [debug] [MainThread]: Executing "git --help"
+[0m19:56:46.817821 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:56:46.819057 [debug] [MainThread]: STDERR: "b''"
+[0m19:56:46.819057 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:56:46.820083 [info ] [MainThread]: Connection:
+[0m19:56:46.821056 [info ] [MainThread]:   database: crypto
+[0m19:56:46.822087 [info ] [MainThread]:   schema: main
+[0m19:56:46.822087 [info ] [MainThread]:   path: ../data/crypto.duckdb
+[0m19:56:46.822087 [info ] [MainThread]:   config_options: None
+[0m19:56:46.823342 [info ] [MainThread]:   extensions: None
+[0m19:56:46.823342 [info ] [MainThread]:   settings: {}
+[0m19:56:46.824648 [info ] [MainThread]:   external_root: .
+[0m19:56:46.826106 [info ] [MainThread]:   use_credential_provider: None
+[0m19:56:46.827103 [info ] [MainThread]:   attach: None
+[0m19:56:46.827103 [info ] [MainThread]:   filesystems: None
+[0m19:56:46.828105 [info ] [MainThread]:   remote: None
+[0m19:56:46.829596 [info ] [MainThread]:   plugins: None
+[0m19:56:46.829596 [info ] [MainThread]:   disable_transactions: False
+[0m19:56:46.831037 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m19:56:47.104347 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m19:56:47.167372 [debug] [MainThread]: Using duckdb connection "debug"
+[0m19:56:47.168826 [debug] [MainThread]: On debug: select 1 as id
+[0m19:56:47.169790 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:56:47.214841 [debug] [MainThread]: SQL status: OK in 0.045 seconds
+[0m19:56:47.216347 [debug] [MainThread]: On debug: Close
+[0m19:56:47.217346 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m19:56:47.218520 [info ] [MainThread]: [32mAll checks passed![0m
+[0m19:56:47.219783 [debug] [MainThread]: Command `dbt debug` succeeded at 19:56:47.219783 after 0.90 seconds
+[0m19:56:47.220862 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:56:47.221461 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015C977D5C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015C9DBF4110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015C9DBF5150>]}
+[0m19:56:47.221461 [debug] [MainThread]: Flushing usage events
+[0m19:56:48.839665 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:57:24.460606 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECBA591A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECBA591550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECBA591250>]}
+
+
+============================== 19:57:24.465252 | 0eedd1ac-941f-45e4-9a29-a7c5e6c266d0 ==============================
+[0m19:57:24.465252 [info ] [MainThread]: Running with dbt=1.11.7
+[0m19:57:24.466165 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Abideen Bello\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Abideen Bello\\dbt_projects\\crypto_pipeline\\dbt_project\\logs'}
+[0m19:57:24.481165 [info ] [MainThread]: dbt version: 1.11.7
+[0m19:57:24.482165 [info ] [MainThread]: python version: 3.11.9
+[0m19:57:24.483165 [info ] [MainThread]: python path: C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\crypto\Scripts\python.exe
+[0m19:57:24.484171 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m19:57:24.623413 [info ] [MainThread]: Using profiles dir at C:\Users\Abideen Bello\.dbt
+[0m19:57:24.625327 [info ] [MainThread]: Using profiles.yml file at C:\Users\Abideen Bello\.dbt\profiles.yml
+[0m19:57:24.626325 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\dbt_project.yml
+[0m19:57:24.628449 [info ] [MainThread]: adapter type: duckdb
+[0m19:57:24.629553 [info ] [MainThread]: adapter version: 1.10.1
+[0m19:57:24.753417 [info ] [MainThread]: Configuration:
+[0m19:57:24.754417 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:57:24.755418 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m19:57:24.756418 [info ] [MainThread]: Required dependencies:
+[0m19:57:24.757417 [debug] [MainThread]: Executing "git --help"
+[0m19:57:24.802086 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:57:24.803086 [debug] [MainThread]: STDERR: "b''"
+[0m19:57:24.804087 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:57:24.804087 [info ] [MainThread]: Connection:
+[0m19:57:24.806089 [info ] [MainThread]:   database: crypto
+[0m19:57:24.807088 [info ] [MainThread]:   schema: main
+[0m19:57:24.807088 [info ] [MainThread]:   path: {env_var('DBT_DEV_PATH', '../data/crypto.duckdb')}
+[0m19:57:24.808089 [info ] [MainThread]:   config_options: None
+[0m19:57:24.809088 [info ] [MainThread]:   extensions: None
+[0m19:57:24.810391 [info ] [MainThread]:   settings: {}
+[0m19:57:24.811865 [info ] [MainThread]:   external_root: .
+[0m19:57:24.813152 [info ] [MainThread]:   use_credential_provider: None
+[0m19:57:24.813152 [info ] [MainThread]:   attach: None
+[0m19:57:24.814145 [info ] [MainThread]:   filesystems: None
+[0m19:57:24.815221 [info ] [MainThread]:   remote: None
+[0m19:57:24.816221 [info ] [MainThread]:   plugins: None
+[0m19:57:24.816221 [info ] [MainThread]:   disable_transactions: False
+[0m19:57:24.818224 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m19:57:25.112382 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m19:57:25.178535 [debug] [MainThread]: Using duckdb connection "debug"
+[0m19:57:25.179535 [debug] [MainThread]: On debug: select 1 as id
+[0m19:57:25.179535 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:57:25.201543 [debug] [MainThread]: DuckDB adapter: duckdb error: IO Error: Cannot open file "\\?\C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\{env_var('DBT_DEV_PATH', '..\data\crypto.duckdb')}": The system cannot find the path specified.
+
+[0m19:57:25.202815 [debug] [MainThread]: DuckDB adapter: Error running SQL: select 1 as id
+[0m19:57:25.203840 [debug] [MainThread]: DuckDB adapter: Rolling back transaction.
+[0m19:57:25.203840 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:57:25.228831 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m19:57:25.230833 [info ] [MainThread]: [31m1 check failed:[0m
+[0m19:57:25.231836 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >IO Error: Cannot open file "\\?\C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\{env_var('DBT_DEV_PATH', '..\data\crypto.duckdb')}": The system cannot find the path specified.
+
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m19:57:25.233088 [debug] [MainThread]: Command `dbt debug` failed at 19:57:25.233088 after 0.91 seconds
+[0m19:57:25.233088 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:57:25.234089 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ECBA328ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC80215F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC80215E10>]}
+[0m19:57:25.235089 [debug] [MainThread]: Flushing usage events
+[0m19:57:26.438558 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:57:34.465158 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002576DD38C90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002576DFA00D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002576DFA20D0>]}
+
+
+============================== 19:57:34.469332 | 2fbb3f29-dfb5-4b20-a2ca-1978506a730f ==============================
+[0m19:57:34.469332 [info ] [MainThread]: Running with dbt=1.11.7
+[0m19:57:34.470240 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Abideen Bello\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Abideen Bello\\dbt_projects\\crypto_pipeline\\dbt_project\\logs'}
+[0m19:57:34.485241 [info ] [MainThread]: dbt version: 1.11.7
+[0m19:57:34.486245 [info ] [MainThread]: python version: 3.11.9
+[0m19:57:34.486245 [info ] [MainThread]: python path: C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\crypto\Scripts\python.exe
+[0m19:57:34.488363 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m19:57:34.640498 [info ] [MainThread]: Using profiles dir at C:\Users\Abideen Bello\.dbt
+[0m19:57:34.642408 [info ] [MainThread]: Using profiles.yml file at C:\Users\Abideen Bello\.dbt\profiles.yml
+[0m19:57:34.644410 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\dbt_project.yml
+[0m19:57:34.647407 [info ] [MainThread]: adapter type: duckdb
+[0m19:57:34.648406 [info ] [MainThread]: adapter version: 1.10.1
+[0m19:57:34.794978 [info ] [MainThread]: Configuration:
+[0m19:57:34.795989 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:57:34.796976 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m19:57:34.798356 [info ] [MainThread]: Required dependencies:
+[0m19:57:34.798356 [debug] [MainThread]: Executing "git --help"
+[0m19:57:34.857025 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:57:34.858055 [debug] [MainThread]: STDERR: "b''"
+[0m19:57:34.858055 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:57:34.859394 [info ] [MainThread]: Connection:
+[0m19:57:34.861397 [info ] [MainThread]:   database: crypto
+[0m19:57:34.862835 [info ] [MainThread]:   schema: main
+[0m19:57:34.862835 [info ] [MainThread]:   path: {env_var('DBT_DEV_PATH', '../data/crypto.duckdb')}
+[0m19:57:34.863835 [info ] [MainThread]:   config_options: None
+[0m19:57:34.864835 [info ] [MainThread]:   extensions: None
+[0m19:57:34.865837 [info ] [MainThread]:   settings: {}
+[0m19:57:34.865837 [info ] [MainThread]:   external_root: .
+[0m19:57:34.867192 [info ] [MainThread]:   use_credential_provider: None
+[0m19:57:34.868616 [info ] [MainThread]:   attach: None
+[0m19:57:34.868616 [info ] [MainThread]:   filesystems: None
+[0m19:57:34.869643 [info ] [MainThread]:   remote: None
+[0m19:57:34.870805 [info ] [MainThread]:   plugins: None
+[0m19:57:34.870805 [info ] [MainThread]:   disable_transactions: False
+[0m19:57:34.873105 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m19:57:35.159303 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m19:57:35.222909 [debug] [MainThread]: Using duckdb connection "debug"
+[0m19:57:35.223922 [debug] [MainThread]: On debug: select 1 as id
+[0m19:57:35.224922 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:57:35.250203 [debug] [MainThread]: DuckDB adapter: duckdb error: IO Error: Cannot open file "\\?\C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\{env_var('DBT_DEV_PATH', '..\data\crypto.duckdb')}": The system cannot find the path specified.
+
+[0m19:57:35.250203 [debug] [MainThread]: DuckDB adapter: Error running SQL: select 1 as id
+[0m19:57:35.251614 [debug] [MainThread]: DuckDB adapter: Rolling back transaction.
+[0m19:57:35.252613 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:57:35.274818 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m19:57:35.276821 [info ] [MainThread]: [31m1 check failed:[0m
+[0m19:57:35.278255 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >IO Error: Cannot open file "\\?\C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\{env_var('DBT_DEV_PATH', '..\data\crypto.duckdb')}": The system cannot find the path specified.
+
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m19:57:35.279254 [debug] [MainThread]: Command `dbt debug` failed at 19:57:35.279254 after 0.96 seconds
+[0m19:57:35.280255 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:57:35.281254 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002570020A050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002570020A150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002576F0A9F50>]}
+[0m19:57:35.281254 [debug] [MainThread]: Flushing usage events
+[0m19:57:36.454798 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:58:14.860963 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C548D42690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C548D40E50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C548D42450>]}
+
+
+============================== 19:58:14.865391 | acbbcbe3-bd0d-4c53-b701-2a3766300948 ==============================
+[0m19:58:14.865391 [info ] [MainThread]: Running with dbt=1.11.7
+[0m19:58:14.866385 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Abideen Bello\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Abideen Bello\\dbt_projects\\crypto_pipeline\\dbt_project\\logs'}
+[0m19:58:14.881384 [info ] [MainThread]: dbt version: 1.11.7
+[0m19:58:14.882395 [info ] [MainThread]: python version: 3.11.9
+[0m19:58:14.883385 [info ] [MainThread]: python path: C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\crypto\Scripts\python.exe
+[0m19:58:14.884414 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m19:58:15.014437 [info ] [MainThread]: Using profiles dir at C:\Users\Abideen Bello\.dbt
+[0m19:58:15.015441 [info ] [MainThread]: Using profiles.yml file at C:\Users\Abideen Bello\.dbt\profiles.yml
+[0m19:58:15.016348 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\dbt_project.yml
+[0m19:58:15.018821 [info ] [MainThread]: adapter type: duckdb
+[0m19:58:15.019821 [info ] [MainThread]: adapter version: 1.10.1
+[0m19:58:15.137833 [info ] [MainThread]: Configuration:
+[0m19:58:15.138793 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:58:15.139743 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m19:58:15.140737 [info ] [MainThread]: Required dependencies:
+[0m19:58:15.141740 [debug] [MainThread]: Executing "git --help"
+[0m19:58:15.185543 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:58:15.186543 [debug] [MainThread]: STDERR: "b''"
+[0m19:58:15.187543 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:58:15.188543 [info ] [MainThread]: Connection:
+[0m19:58:15.189814 [info ] [MainThread]:   database: crypto
+[0m19:58:15.189814 [info ] [MainThread]:   schema: main
+[0m19:58:15.191072 [info ] [MainThread]:   path: ../data/crypto.duckdb
+[0m19:58:15.192067 [info ] [MainThread]:   config_options: None
+[0m19:58:15.192067 [info ] [MainThread]:   extensions: None
+[0m19:58:15.193329 [info ] [MainThread]:   settings: {}
+[0m19:58:15.194328 [info ] [MainThread]:   external_root: .
+[0m19:58:15.195328 [info ] [MainThread]:   use_credential_provider: None
+[0m19:58:15.196330 [info ] [MainThread]:   attach: None
+[0m19:58:15.197330 [info ] [MainThread]:   filesystems: None
+[0m19:58:15.197330 [info ] [MainThread]:   remote: None
+[0m19:58:15.198328 [info ] [MainThread]:   plugins: None
+[0m19:58:15.199328 [info ] [MainThread]:   disable_transactions: False
+[0m19:58:15.200327 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m19:58:15.489285 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m19:58:15.550066 [debug] [MainThread]: Using duckdb connection "debug"
+[0m19:58:15.551066 [debug] [MainThread]: On debug: select 1 as id
+[0m19:58:15.551066 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:58:15.572073 [debug] [MainThread]: SQL status: OK in 0.021 seconds
+[0m19:58:15.573075 [debug] [MainThread]: On debug: Close
+[0m19:58:15.574076 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m19:58:15.575074 [info ] [MainThread]: [32mAll checks passed![0m
+[0m19:58:15.577071 [debug] [MainThread]: Command `dbt debug` succeeded at 19:58:15.577071 after 0.85 seconds
+[0m19:58:15.577071 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:58:15.578339 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C543955C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5000C6990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C549E4AC90>]}
+[0m19:58:15.578339 [debug] [MainThread]: Flushing usage events
+[0m19:58:16.981421 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:58:34.067622 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002197C9F8C90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002197CC616D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002197CC61A90>]}
+
+
+============================== 19:58:34.072995 | 30ea8ec0-f22a-4e9a-b89e-fcda0c98f478 ==============================
+[0m19:58:34.072995 [info ] [MainThread]: Running with dbt=1.11.7
+[0m19:58:34.074996 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Abideen Bello\\.dbt', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Abideen Bello\\dbt_projects\\crypto_pipeline\\dbt_project\\logs'}
+[0m19:58:34.098146 [info ] [MainThread]: dbt version: 1.11.7
+[0m19:58:34.099147 [info ] [MainThread]: python version: 3.11.9
+[0m19:58:34.100147 [info ] [MainThread]: python path: C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\crypto\Scripts\python.exe
+[0m19:58:34.101146 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m19:58:34.269137 [info ] [MainThread]: Using profiles dir at C:\Users\Abideen Bello\.dbt
+[0m19:58:34.271053 [info ] [MainThread]: Using profiles.yml file at C:\Users\Abideen Bello\.dbt\profiles.yml
+[0m19:58:34.271053 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Abideen Bello\dbt_projects\crypto_pipeline\dbt_project\dbt_project.yml
+[0m19:58:34.273631 [info ] [MainThread]: adapter type: duckdb
+[0m19:58:34.274753 [info ] [MainThread]: adapter version: 1.10.1
+[0m19:58:34.412798 [info ] [MainThread]: Configuration:
+[0m19:58:34.413805 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:58:34.414754 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m19:58:34.415716 [info ] [MainThread]: Required dependencies:
+[0m19:58:34.416760 [debug] [MainThread]: Executing "git --help"
+[0m19:58:34.463484 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:58:34.464590 [debug] [MainThread]: STDERR: "b''"
+[0m19:58:34.464590 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:58:34.465990 [info ] [MainThread]: Connection:
+[0m19:58:34.467119 [info ] [MainThread]:   database: crypto
+[0m19:58:34.468141 [info ] [MainThread]:   schema: main
+[0m19:58:34.469141 [info ] [MainThread]:   path: ../data/crypto.duckdb
+[0m19:58:34.470141 [info ] [MainThread]:   config_options: None
+[0m19:58:34.470141 [info ] [MainThread]:   extensions: None
+[0m19:58:34.471537 [info ] [MainThread]:   settings: {}
+[0m19:58:34.471537 [info ] [MainThread]:   external_root: .
+[0m19:58:34.472947 [info ] [MainThread]:   use_credential_provider: None
+[0m19:58:34.473962 [info ] [MainThread]:   attach: None
+[0m19:58:34.474960 [info ] [MainThread]:   filesystems: None
+[0m19:58:34.476312 [info ] [MainThread]:   remote: None
+[0m19:58:34.478307 [info ] [MainThread]:   plugins: None
+[0m19:58:34.478307 [info ] [MainThread]:   disable_transactions: False
+[0m19:58:34.479368 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m19:58:34.798376 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m19:58:34.858260 [debug] [MainThread]: Using duckdb connection "debug"
+[0m19:58:34.859344 [debug] [MainThread]: On debug: select 1 as id
+[0m19:58:34.860257 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:58:34.878653 [debug] [MainThread]: SQL status: OK in 0.018 seconds
+[0m19:58:34.879710 [debug] [MainThread]: On debug: Close
+[0m19:58:34.880796 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m19:58:34.881716 [info ] [MainThread]: [32mAll checks passed![0m
+[0m19:58:34.881716 [debug] [MainThread]: Command `dbt debug` succeeded at 19:58:34.881716 after 0.98 seconds
+[0m19:58:34.883188 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:58:34.883188 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021977845C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219005D4C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002197C902510>]}
+[0m19:58:34.884650 [debug] [MainThread]: Flushing usage events
+[0m19:58:36.211738 [debug] [MainThread]: An error was encountered while trying to flush usage events
